@@ -1,0 +1,25 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# OS
+.DS_Store
+
+# Local generates only
+output/images/
+output/metadata/
+output/previews/
+reports/*.png
+reports/*.json
+!output/README.md
+!reports/README.md
+
+# Full collection dumps
+manifests/combos_*.json
+manifests/combos_*.csv
+manifests/images_sha256.txt
+
+.env
+.env.*

@@ -1,0 +1,30 @@
+{
+  "width": 1000,
+  "height": 1000,
+  "format": "PNG",
+  "mode": "RGBA",
+  "layer_order": [
+    "background",
+    "base",
+    "clothing",
+    "mouth",
+    "eyes",
+    "special",
+    "headwear"
+  ],
+  "anchors": {
+    "head_center_x": 0.5,
+    "eye_line_y": 0.42,
+    "left_eye_x": 0.40,
+    "right_eye_x": 0.60,
+    "nose_y": 0.50,
+    "mouth_y": 0.56,
+    "hat_brim_y": 0.22,
+    "collar_y": 0.70,
+    "shoulder_y": 0.80,
+    "notes": "Approximate from base art; refine with drawing_map once skeleton is dialed."
+  },
+  "background": {
+    "fill": true
+  }
+}

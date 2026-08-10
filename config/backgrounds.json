@@ -1,0 +1,16 @@
+{
+  "backgrounds": [
+    {
+      "id": "paper_white",
+      "name": "Paper White",
+      "color": [245, 243, 238, 255],
+      "weight": 20.0
+    },
+    {
+      "id": "void_black",
+      "name": "Void Black",
+      "color": [12, 12, 14, 255],
+      "weight": 18.0
+    }
+  ]
+}

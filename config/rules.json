@@ -1,0 +1,44 @@
+{
+  "collection_size": 5555,
+  "proof_size": 50,
+  "seed": 5555,
+  "none_weights": {
+    "eyes_normal": 40.0,
+    "mouth_none": 35.0,
+    "headwear_none": 30.0,
+    "special_none": 45.0
+  },
+  "compatibility": {
+    "gas_mask_blocks_mouth_props": true,
+    "surgical_mask_blocks_mouth_props": true,
+    "bandana_mouth_blocks_facial_hair": true,
+    "full_helmet_blocks_headwear_stack": true,
+    "eye_cover_keywords": [
+      "sunglasses",
+      "pixel_sunglasses",
+      "vr_goggles",
+      "night_vision_goggles",
+      "glasses_3d",
+      "eye_patch"
+    ],
+    "mouth_cover_keywords": [
+      "bandana_mouth",
+      "surgical_mask",
+      "gas_mask"
+    ],
+    "heavy_headwear_keywords": [
+      "astronaut_helmet",
+      "samurai_helmet",
+      "viking_helmet",
+      "military_helmet",
+      "racing_helmet"
+    ],
+    "notes": "Refine conflicts once art exists (e.g. gas mask + cigarette, full helmet + crown)."
+  },
+  "metadata": {
+    "name_prefix": "Wogrok",
+    "description": "WOGROK — one immutable exhausted character, infinite crypto lives. Traits tell the story.",
+    "external_url": ""
+  },
+  "base_policy": "single_immutable_base"
+}

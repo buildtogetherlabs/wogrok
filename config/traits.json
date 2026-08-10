@@ -1,0 +1,1931 @@
+{
+  "version": 1,
+  "collection": "WOGROK",
+  "philosophy": "One immutable Wogrok DNA. Traits tell the story \u2014 not 25 different Wojaks.",
+  "base_policy": "single_immutable_base",
+  "base": {
+    "id": "wogrok_base",
+    "source_rel": "base/wogrok_base.png",
+    "immutable": true,
+    "dna": [
+      "same head shape",
+      "same black line style",
+      "bald",
+      "no eyebrows",
+      "same tiny nose",
+      "same mouth geometry",
+      "left eye flatter/squashed",
+      "right eye rounder",
+      "left pupil smaller",
+      "right pupil larger",
+      "tired under-eye bag",
+      "blank/deadpan facial energy"
+    ]
+  },
+  "layer_order": [
+    "background",
+    "base",
+    "clothing",
+    "mouth",
+    "eyes",
+    "special",
+    "headwear"
+  ],
+  "counts": {
+    "background": 2,
+    "eyes": 27,
+    "mouth": 27,
+    "headwear": 35,
+    "clothing": 56,
+    "special": 60
+  },
+  "traits": {
+    "background": [
+      {
+        "id": "paper_white",
+        "category": "background",
+        "name": "Paper White",
+        "color": [
+          245,
+          243,
+          238,
+          255
+        ],
+        "weight": 20.0,
+        "tier": "common",
+        "source_rel": "background/paper_white.png",
+        "status": "done"
+      },
+      {
+        "id": "void_black",
+        "category": "background",
+        "name": "Void Black",
+        "color": [
+          12,
+          12,
+          14,
+          255
+        ],
+        "weight": 18.0,
+        "tier": "common",
+        "source_rel": "background/void_black.png",
+        "status": "done"
+      }
+    ],
+    "eyes": [
+      {
+        "id": "normal",
+        "category": "eyes",
+        "name": "Normal",
+        "weight": 40.0,
+        "tier": "common",
+        "source_rel": null,
+        "status": "done"
+      },
+      {
+        "id": "sleepy",
+        "category": "eyes",
+        "name": "Sleepy / Half-Lidded",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/sleepy.png",
+        "status": "todo"
+      },
+      {
+        "id": "bloodshot",
+        "category": "eyes",
+        "name": "Bloodshot",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/bloodshot.png",
+        "status": "todo"
+      },
+      {
+        "id": "crying",
+        "category": "eyes",
+        "name": "Crying",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/crying.png",
+        "status": "todo"
+      },
+      {
+        "id": "red_eyes",
+        "category": "eyes",
+        "name": "Red Eyes",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/red_eyes.png",
+        "status": "todo"
+      },
+      {
+        "id": "laser_eyes",
+        "category": "eyes",
+        "name": "Laser Eyes",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/laser_eyes.png",
+        "status": "todo"
+      },
+      {
+        "id": "blacked_out",
+        "category": "eyes",
+        "name": "Blacked-Out Eyes",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/blacked_out.png",
+        "status": "todo"
+      },
+      {
+        "id": "x_eyes",
+        "category": "eyes",
+        "name": "X Eyes",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/x_eyes.png",
+        "status": "todo"
+      },
+      {
+        "id": "dollar_pupils",
+        "category": "eyes",
+        "name": "Dollar-Sign Pupils",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/dollar_pupils.png",
+        "status": "todo"
+      },
+      {
+        "id": "bitcoin_pupils",
+        "category": "eyes",
+        "name": "Bitcoin Pupils",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/bitcoin_pupils.png",
+        "status": "todo"
+      },
+      {
+        "id": "heart_pupils",
+        "category": "eyes",
+        "name": "Heart Pupils",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/heart_pupils.png",
+        "status": "todo"
+      },
+      {
+        "id": "spiral_pupils",
+        "category": "eyes",
+        "name": "Spiral Pupils",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/spiral_pupils.png",
+        "status": "todo"
+      },
+      {
+        "id": "hypnotized",
+        "category": "eyes",
+        "name": "Hypnotized",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/hypnotized.png",
+        "status": "todo"
+      },
+      {
+        "id": "anime_eyes",
+        "category": "eyes",
+        "name": "Anime Eyes",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/anime_eyes.png",
+        "status": "todo"
+      },
+      {
+        "id": "googly_eyes",
+        "category": "eyes",
+        "name": "Googly Eyes",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/googly_eyes.png",
+        "status": "todo"
+      },
+      {
+        "id": "pixel_eyes",
+        "category": "eyes",
+        "name": "Pixel Eyes",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/pixel_eyes.png",
+        "status": "todo"
+      },
+      {
+        "id": "glasses_3d",
+        "category": "eyes",
+        "name": "3D Glasses",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/glasses_3d.png",
+        "status": "todo"
+      },
+      {
+        "id": "sunglasses",
+        "category": "eyes",
+        "name": "Sunglasses",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/sunglasses.png",
+        "status": "todo"
+      },
+      {
+        "id": "pixel_sunglasses",
+        "category": "eyes",
+        "name": "Pixel Sunglasses",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/pixel_sunglasses.png",
+        "status": "todo"
+      },
+      {
+        "id": "vr_goggles",
+        "category": "eyes",
+        "name": "VR Goggles",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/vr_goggles.png",
+        "status": "todo"
+      },
+      {
+        "id": "night_vision_goggles",
+        "category": "eyes",
+        "name": "Night-Vision Goggles",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/night_vision_goggles.png",
+        "status": "todo"
+      },
+      {
+        "id": "monocle",
+        "category": "eyes",
+        "name": "Monocle",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/monocle.png",
+        "status": "todo"
+      },
+      {
+        "id": "eye_patch",
+        "category": "eyes",
+        "name": "Eye Patch",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/eye_patch.png",
+        "status": "todo"
+      },
+      {
+        "id": "glitched_eyes",
+        "category": "eyes",
+        "name": "Glitched Eyes",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/glitched_eyes.png",
+        "status": "todo"
+      },
+      {
+        "id": "crosshair_eyes",
+        "category": "eyes",
+        "name": "Crosshair Eyes",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/crosshair_eyes.png",
+        "status": "todo"
+      },
+      {
+        "id": "fire_eyes",
+        "category": "eyes",
+        "name": "Fire Eyes",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/fire_eyes.png",
+        "status": "todo"
+      },
+      {
+        "id": "rainbow_eyes",
+        "category": "eyes",
+        "name": "Rainbow Eyes",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "eyes/rainbow_eyes.png",
+        "status": "todo"
+      }
+    ],
+    "mouth": [
+      {
+        "id": "none",
+        "category": "mouth",
+        "name": "Nothing / Normal",
+        "weight": 35.0,
+        "tier": "common",
+        "source_rel": null,
+        "status": "done"
+      },
+      {
+        "id": "cigarette",
+        "category": "mouth",
+        "name": "Cigarette",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/cigarette.png",
+        "status": "todo"
+      },
+      {
+        "id": "joint",
+        "category": "mouth",
+        "name": "Joint",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/joint.png",
+        "status": "todo"
+      },
+      {
+        "id": "cigar",
+        "category": "mouth",
+        "name": "Cigar",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/cigar.png",
+        "status": "todo"
+      },
+      {
+        "id": "pipe",
+        "category": "mouth",
+        "name": "Pipe",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/pipe.png",
+        "status": "todo"
+      },
+      {
+        "id": "vape",
+        "category": "mouth",
+        "name": "Vape",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/vape.png",
+        "status": "todo"
+      },
+      {
+        "id": "toothpick",
+        "category": "mouth",
+        "name": "Toothpick",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/toothpick.png",
+        "status": "todo"
+      },
+      {
+        "id": "lollipop",
+        "category": "mouth",
+        "name": "Lollipop",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/lollipop.png",
+        "status": "todo"
+      },
+      {
+        "id": "straw",
+        "category": "mouth",
+        "name": "Straw",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/straw.png",
+        "status": "todo"
+      },
+      {
+        "id": "bandana_mouth",
+        "category": "mouth",
+        "name": "Bandana Over Mouth",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/bandana_mouth.png",
+        "status": "todo"
+      },
+      {
+        "id": "surgical_mask",
+        "category": "mouth",
+        "name": "Surgical Mask",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/surgical_mask.png",
+        "status": "todo"
+      },
+      {
+        "id": "gas_mask",
+        "category": "mouth",
+        "name": "Gas Mask",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/gas_mask.png",
+        "status": "todo"
+      },
+      {
+        "id": "mustache",
+        "category": "mouth",
+        "name": "Mustache",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/mustache.png",
+        "status": "todo"
+      },
+      {
+        "id": "handlebar_mustache",
+        "category": "mouth",
+        "name": "Handlebar Mustache",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/handlebar_mustache.png",
+        "status": "todo"
+      },
+      {
+        "id": "stubble",
+        "category": "mouth",
+        "name": "Stubble",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/stubble.png",
+        "status": "todo"
+      },
+      {
+        "id": "short_beard",
+        "category": "mouth",
+        "name": "Short Beard",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/short_beard.png",
+        "status": "todo"
+      },
+      {
+        "id": "full_beard",
+        "category": "mouth",
+        "name": "Full Beard",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/full_beard.png",
+        "status": "todo"
+      },
+      {
+        "id": "goatee",
+        "category": "mouth",
+        "name": "Goatee",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/goatee.png",
+        "status": "todo"
+      },
+      {
+        "id": "fu_manchu",
+        "category": "mouth",
+        "name": "Fu Manchu",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/fu_manchu.png",
+        "status": "todo"
+      },
+      {
+        "id": "gold_teeth",
+        "category": "mouth",
+        "name": "Gold Teeth",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/gold_teeth.png",
+        "status": "todo"
+      },
+      {
+        "id": "diamond_teeth",
+        "category": "mouth",
+        "name": "Diamond Teeth",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/diamond_teeth.png",
+        "status": "todo"
+      },
+      {
+        "id": "fangs",
+        "category": "mouth",
+        "name": "Fangs",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/fangs.png",
+        "status": "todo"
+      },
+      {
+        "id": "drool",
+        "category": "mouth",
+        "name": "Drool",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/drool.png",
+        "status": "todo"
+      },
+      {
+        "id": "tongue",
+        "category": "mouth",
+        "name": "Tongue",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/tongue.png",
+        "status": "todo"
+      },
+      {
+        "id": "bubble_gum",
+        "category": "mouth",
+        "name": "Bubble Gum",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/bubble_gum.png",
+        "status": "todo"
+      },
+      {
+        "id": "blood",
+        "category": "mouth",
+        "name": "Blood",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/blood.png",
+        "status": "todo"
+      },
+      {
+        "id": "coffee_cup",
+        "category": "mouth",
+        "name": "Coffee Cup / Straw",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "mouth/coffee_cup.png",
+        "status": "todo"
+      }
+    ],
+    "headwear": [
+      {
+        "id": "none",
+        "category": "headwear",
+        "name": "Nothing",
+        "weight": 30.0,
+        "tier": "common",
+        "source_rel": null,
+        "status": "done"
+      },
+      {
+        "id": "baseball_cap",
+        "category": "headwear",
+        "name": "Baseball Cap",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/baseball_cap.png",
+        "status": "todo"
+      },
+      {
+        "id": "hodl_cap",
+        "category": "headwear",
+        "name": "HODL Cap",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/hodl_cap.png",
+        "status": "todo"
+      },
+      {
+        "id": "degen_cap",
+        "category": "headwear",
+        "name": "Degen Cap",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/degen_cap.png",
+        "status": "todo"
+      },
+      {
+        "id": "trucker_hat",
+        "category": "headwear",
+        "name": "Trucker Hat",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/trucker_hat.png",
+        "status": "todo"
+      },
+      {
+        "id": "beanie",
+        "category": "headwear",
+        "name": "Beanie",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/beanie.png",
+        "status": "todo"
+      },
+      {
+        "id": "bucket_hat",
+        "category": "headwear",
+        "name": "Bucket Hat",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/bucket_hat.png",
+        "status": "todo"
+      },
+      {
+        "id": "cowboy_hat",
+        "category": "headwear",
+        "name": "Cowboy Hat",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/cowboy_hat.png",
+        "status": "todo"
+      },
+      {
+        "id": "hard_hat",
+        "category": "headwear",
+        "name": "Construction Hard Hat",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/hard_hat.png",
+        "status": "todo"
+      },
+      {
+        "id": "viking_helmet",
+        "category": "headwear",
+        "name": "Viking Helmet",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/viking_helmet.png",
+        "status": "todo"
+      },
+      {
+        "id": "samurai_helmet",
+        "category": "headwear",
+        "name": "Samurai Helmet",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/samurai_helmet.png",
+        "status": "todo"
+      },
+      {
+        "id": "pirate_hat",
+        "category": "headwear",
+        "name": "Pirate Hat",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/pirate_hat.png",
+        "status": "todo"
+      },
+      {
+        "id": "top_hat",
+        "category": "headwear",
+        "name": "Top Hat",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/top_hat.png",
+        "status": "todo"
+      },
+      {
+        "id": "fedora",
+        "category": "headwear",
+        "name": "Fedora",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/fedora.png",
+        "status": "todo"
+      },
+      {
+        "id": "crown",
+        "category": "headwear",
+        "name": "Crown",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/crown.png",
+        "status": "todo"
+      },
+      {
+        "id": "king_crown",
+        "category": "headwear",
+        "name": "King Crown",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/king_crown.png",
+        "status": "todo"
+      },
+      {
+        "id": "wizard_hat",
+        "category": "headwear",
+        "name": "Wizard Hat",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/wizard_hat.png",
+        "status": "todo"
+      },
+      {
+        "id": "graduation_cap",
+        "category": "headwear",
+        "name": "Graduation Cap",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/graduation_cap.png",
+        "status": "todo"
+      },
+      {
+        "id": "santa_hat",
+        "category": "headwear",
+        "name": "Santa Hat",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/santa_hat.png",
+        "status": "todo"
+      },
+      {
+        "id": "party_hat",
+        "category": "headwear",
+        "name": "Party Hat",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/party_hat.png",
+        "status": "todo"
+      },
+      {
+        "id": "astronaut_helmet",
+        "category": "headwear",
+        "name": "Astronaut Helmet",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/astronaut_helmet.png",
+        "status": "todo"
+      },
+      {
+        "id": "military_helmet",
+        "category": "headwear",
+        "name": "Military Helmet",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/military_helmet.png",
+        "status": "todo"
+      },
+      {
+        "id": "racing_helmet",
+        "category": "headwear",
+        "name": "Racing Helmet",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/racing_helmet.png",
+        "status": "todo"
+      },
+      {
+        "id": "sombrero",
+        "category": "headwear",
+        "name": "Sombrero",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/sombrero.png",
+        "status": "todo"
+      },
+      {
+        "id": "chef_hat",
+        "category": "headwear",
+        "name": "Chef Hat",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/chef_hat.png",
+        "status": "todo"
+      },
+      {
+        "id": "propeller_hat",
+        "category": "headwear",
+        "name": "Propeller Hat",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/propeller_hat.png",
+        "status": "todo"
+      },
+      {
+        "id": "crypto_maga_hat",
+        "category": "headwear",
+        "name": "Crypto MAGA-Style Hat",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/crypto_maga_hat.png",
+        "status": "todo"
+      },
+      {
+        "id": "headband",
+        "category": "headwear",
+        "name": "Headband",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/headband.png",
+        "status": "todo"
+      },
+      {
+        "id": "bandana",
+        "category": "headwear",
+        "name": "Bandana",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/bandana.png",
+        "status": "todo"
+      },
+      {
+        "id": "halo",
+        "category": "headwear",
+        "name": "Halo",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/halo.png",
+        "status": "todo"
+      },
+      {
+        "id": "devil_horns",
+        "category": "headwear",
+        "name": "Devil Horns",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/devil_horns.png",
+        "status": "todo"
+      },
+      {
+        "id": "angel_halo",
+        "category": "headwear",
+        "name": "Angel Halo",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/angel_halo.png",
+        "status": "todo"
+      },
+      {
+        "id": "crypto_novelty_hat",
+        "category": "headwear",
+        "name": "Crypto Novelty Hat",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/crypto_novelty_hat.png",
+        "status": "todo"
+      },
+      {
+        "id": "ngmi_cap",
+        "category": "headwear",
+        "name": "NGMI Cap",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/ngmi_cap.png",
+        "status": "todo"
+      },
+      {
+        "id": "wagmi_cap",
+        "category": "headwear",
+        "name": "WAGMI Cap",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "headwear/wagmi_cap.png",
+        "status": "todo"
+      }
+    ],
+    "clothing": [
+      {
+        "id": "black_hoodie",
+        "category": "clothing",
+        "name": "Black Hoodie",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/black_hoodie.png",
+        "status": "todo"
+      },
+      {
+        "id": "zip_hoodie",
+        "category": "clothing",
+        "name": "Zip Hoodie",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/zip_hoodie.png",
+        "status": "todo"
+      },
+      {
+        "id": "oversized_hoodie",
+        "category": "clothing",
+        "name": "Oversized Hoodie",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/oversized_hoodie.png",
+        "status": "todo"
+      },
+      {
+        "id": "crypto_hoodie",
+        "category": "clothing",
+        "name": "Crypto Hoodie",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/crypto_hoodie.png",
+        "status": "todo"
+      },
+      {
+        "id": "hodl_hoodie",
+        "category": "clothing",
+        "name": "HODL Hoodie",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/hodl_hoodie.png",
+        "status": "todo"
+      },
+      {
+        "id": "wagmi_hoodie",
+        "category": "clothing",
+        "name": "WAGMI Hoodie",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/wagmi_hoodie.png",
+        "status": "todo"
+      },
+      {
+        "id": "ngmi_hoodie",
+        "category": "clothing",
+        "name": "NGMI Hoodie",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/ngmi_hoodie.png",
+        "status": "todo"
+      },
+      {
+        "id": "rekt_hoodie",
+        "category": "clothing",
+        "name": "REKT Hoodie",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/rekt_hoodie.png",
+        "status": "todo"
+      },
+      {
+        "id": "degen_hoodie",
+        "category": "clothing",
+        "name": "Degen Hoodie",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/degen_hoodie.png",
+        "status": "todo"
+      },
+      {
+        "id": "tracksuit",
+        "category": "clothing",
+        "name": "Tracksuit",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/tracksuit.png",
+        "status": "todo"
+      },
+      {
+        "id": "puffer_jacket",
+        "category": "clothing",
+        "name": "Puffer Jacket",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/puffer_jacket.png",
+        "status": "todo"
+      },
+      {
+        "id": "bomber_jacket",
+        "category": "clothing",
+        "name": "Bomber Jacket",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/bomber_jacket.png",
+        "status": "todo"
+      },
+      {
+        "id": "techwear",
+        "category": "clothing",
+        "name": "Techwear",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/techwear.png",
+        "status": "todo"
+      },
+      {
+        "id": "trading_shirt",
+        "category": "clothing",
+        "name": "Trading Shirt",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/trading_shirt.png",
+        "status": "todo"
+      },
+      {
+        "id": "crypto_conference_shirt",
+        "category": "clothing",
+        "name": "Crypto Conference Shirt",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/crypto_conference_shirt.png",
+        "status": "todo"
+      },
+      {
+        "id": "gamer_shirt",
+        "category": "clothing",
+        "name": "Gamer Shirt",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/gamer_shirt.png",
+        "status": "todo"
+      },
+      {
+        "id": "gaming_hoodie",
+        "category": "clothing",
+        "name": "Gaming Hoodie",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/gaming_hoodie.png",
+        "status": "todo"
+      },
+      {
+        "id": "esports_jersey",
+        "category": "clothing",
+        "name": "Esports Jersey",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/esports_jersey.png",
+        "status": "todo"
+      },
+      {
+        "id": "meme_tshirt",
+        "category": "clothing",
+        "name": "Meme T-Shirt",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/meme_tshirt.png",
+        "status": "todo"
+      },
+      {
+        "id": "hawaiian_shirt",
+        "category": "clothing",
+        "name": "Hawaiian Shirt",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/hawaiian_shirt.png",
+        "status": "todo"
+      },
+      {
+        "id": "tank_top",
+        "category": "clothing",
+        "name": "Tank Top",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/tank_top.png",
+        "status": "todo"
+      },
+      {
+        "id": "dad_shirt",
+        "category": "clothing",
+        "name": "Dad Shirt",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/dad_shirt.png",
+        "status": "todo"
+      },
+      {
+        "id": "wife_beater",
+        "category": "clothing",
+        "name": "Wife-Beater",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/wife_beater.png",
+        "status": "todo"
+      },
+      {
+        "id": "bathrobe",
+        "category": "clothing",
+        "name": "Bathrobe",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/bathrobe.png",
+        "status": "todo"
+      },
+      {
+        "id": "pajamas",
+        "category": "clothing",
+        "name": "Pajamas",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/pajamas.png",
+        "status": "todo"
+      },
+      {
+        "id": "sweatshirt",
+        "category": "clothing",
+        "name": "Sweatshirt",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/sweatshirt.png",
+        "status": "todo"
+      },
+      {
+        "id": "varsity_jacket",
+        "category": "clothing",
+        "name": "Varsity Jacket",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/varsity_jacket.png",
+        "status": "todo"
+      },
+      {
+        "id": "leather_jacket",
+        "category": "clothing",
+        "name": "Leather Jacket",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/leather_jacket.png",
+        "status": "todo"
+      },
+      {
+        "id": "business_suit",
+        "category": "clothing",
+        "name": "Business Suit",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/business_suit.png",
+        "status": "todo"
+      },
+      {
+        "id": "suit_tie",
+        "category": "clothing",
+        "name": "Suit + Tie",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/suit_tie.png",
+        "status": "todo"
+      },
+      {
+        "id": "open_collar_dress_shirt",
+        "category": "clothing",
+        "name": "Open-Collar Dress Shirt",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/open_collar_dress_shirt.png",
+        "status": "todo"
+      },
+      {
+        "id": "turtleneck",
+        "category": "clothing",
+        "name": "Turtleneck",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/turtleneck.png",
+        "status": "todo"
+      },
+      {
+        "id": "luxury_robe",
+        "category": "clothing",
+        "name": "Luxury Robe",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/luxury_robe.png",
+        "status": "todo"
+      },
+      {
+        "id": "fur_coat",
+        "category": "clothing",
+        "name": "Fur Coat",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/fur_coat.png",
+        "status": "todo"
+      },
+      {
+        "id": "yacht_bro",
+        "category": "clothing",
+        "name": "Yacht Bro Outfit",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/yacht_bro.png",
+        "status": "todo"
+      },
+      {
+        "id": "casino_tuxedo",
+        "category": "clothing",
+        "name": "Casino Tuxedo",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/casino_tuxedo.png",
+        "status": "todo"
+      },
+      {
+        "id": "casino_shirt",
+        "category": "clothing",
+        "name": "Casino Shirt",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/casino_shirt.png",
+        "status": "todo"
+      },
+      {
+        "id": "sleeveless_gym",
+        "category": "clothing",
+        "name": "Sleeveless Gym Shirt",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/sleeveless_gym.png",
+        "status": "todo"
+      },
+      {
+        "id": "dirty_undershirt",
+        "category": "clothing",
+        "name": "Dirty Undershirt",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/dirty_undershirt.png",
+        "status": "todo"
+      },
+      {
+        "id": "ramen_stained_hoodie",
+        "category": "clothing",
+        "name": "Ramen-Stained Hoodie",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/ramen_stained_hoodie.png",
+        "status": "todo"
+      },
+      {
+        "id": "gambling_jersey",
+        "category": "clothing",
+        "name": "Gambling Jersey",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/gambling_jersey.png",
+        "status": "todo"
+      },
+      {
+        "id": "all_in_shirt",
+        "category": "clothing",
+        "name": "ALL IN Shirt",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/all_in_shirt.png",
+        "status": "todo"
+      },
+      {
+        "id": "bull_market_shirt",
+        "category": "clothing",
+        "name": "BULL MARKET Shirt",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/bull_market_shirt.png",
+        "status": "todo"
+      },
+      {
+        "id": "diamond_hands_shirt",
+        "category": "clothing",
+        "name": "DIAMOND HANDS Shirt",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/diamond_hands_shirt.png",
+        "status": "todo"
+      },
+      {
+        "id": "astronaut",
+        "category": "clothing",
+        "name": "Astronaut",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/astronaut.png",
+        "status": "todo"
+      },
+      {
+        "id": "cowboy",
+        "category": "clothing",
+        "name": "Cowboy",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/cowboy.png",
+        "status": "todo"
+      },
+      {
+        "id": "samurai",
+        "category": "clothing",
+        "name": "Samurai",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/samurai.png",
+        "status": "todo"
+      },
+      {
+        "id": "knight",
+        "category": "clothing",
+        "name": "Knight",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/knight.png",
+        "status": "todo"
+      },
+      {
+        "id": "pirate",
+        "category": "clothing",
+        "name": "Pirate",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/pirate.png",
+        "status": "todo"
+      },
+      {
+        "id": "construction_worker",
+        "category": "clothing",
+        "name": "Construction Worker",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/construction_worker.png",
+        "status": "todo"
+      },
+      {
+        "id": "scientist",
+        "category": "clothing",
+        "name": "Scientist",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/scientist.png",
+        "status": "todo"
+      },
+      {
+        "id": "doctor",
+        "category": "clothing",
+        "name": "Doctor",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/doctor.png",
+        "status": "todo"
+      },
+      {
+        "id": "military",
+        "category": "clothing",
+        "name": "Military",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/military.png",
+        "status": "todo"
+      },
+      {
+        "id": "prison_jumpsuit",
+        "category": "clothing",
+        "name": "Prison Jumpsuit",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/prison_jumpsuit.png",
+        "status": "todo"
+      },
+      {
+        "id": "cult_robe",
+        "category": "clothing",
+        "name": "Cult Robe",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/cult_robe.png",
+        "status": "todo"
+      },
+      {
+        "id": "king_robe",
+        "category": "clothing",
+        "name": "King Robe",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "clothing/king_robe.png",
+        "status": "todo"
+      }
+    ],
+    "special": [
+      {
+        "id": "none",
+        "category": "special",
+        "name": "None",
+        "weight": 45.0,
+        "tier": "common",
+        "source_rel": null,
+        "status": "done"
+      },
+      {
+        "id": "degen_face_tattoo",
+        "category": "special",
+        "name": "Degen Face Tattoo",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/degen_face_tattoo.png",
+        "status": "todo"
+      },
+      {
+        "id": "bitcoin_tattoo",
+        "category": "special",
+        "name": "Bitcoin Tattoo",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/bitcoin_tattoo.png",
+        "status": "todo"
+      },
+      {
+        "id": "hodl_tattoo",
+        "category": "special",
+        "name": "HODL Tattoo",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/hodl_tattoo.png",
+        "status": "todo"
+      },
+      {
+        "id": "ngmi_tattoo",
+        "category": "special",
+        "name": "NGMI Tattoo",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/ngmi_tattoo.png",
+        "status": "todo"
+      },
+      {
+        "id": "wagmi_tattoo",
+        "category": "special",
+        "name": "WAGMI Tattoo",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/wagmi_tattoo.png",
+        "status": "todo"
+      },
+      {
+        "id": "rekt_tattoo",
+        "category": "special",
+        "name": "REKT Tattoo",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/rekt_tattoo.png",
+        "status": "todo"
+      },
+      {
+        "id": "teardrop_tattoo",
+        "category": "special",
+        "name": "Teardrop Tattoo",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/teardrop_tattoo.png",
+        "status": "todo"
+      },
+      {
+        "id": "tribal_tattoo",
+        "category": "special",
+        "name": "Tribal Tattoo",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/tribal_tattoo.png",
+        "status": "todo"
+      },
+      {
+        "id": "scar",
+        "category": "special",
+        "name": "Scar",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/scar.png",
+        "status": "todo"
+      },
+      {
+        "id": "face_stitches",
+        "category": "special",
+        "name": "Face Stitches",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/face_stitches.png",
+        "status": "todo"
+      },
+      {
+        "id": "bandage",
+        "category": "special",
+        "name": "Bandage",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/bandage.png",
+        "status": "todo"
+      },
+      {
+        "id": "cheek_sticker",
+        "category": "special",
+        "name": "Cheek Sticker",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/cheek_sticker.png",
+        "status": "todo"
+      },
+      {
+        "id": "nose_piercing",
+        "category": "special",
+        "name": "Nose Piercing",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/nose_piercing.png",
+        "status": "todo"
+      },
+      {
+        "id": "septum_ring",
+        "category": "special",
+        "name": "Septum Ring",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/septum_ring.png",
+        "status": "todo"
+      },
+      {
+        "id": "lip_piercing",
+        "category": "special",
+        "name": "Lip Piercing",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/lip_piercing.png",
+        "status": "todo"
+      },
+      {
+        "id": "eyebrow_piercing",
+        "category": "special",
+        "name": "Eyebrow Piercing",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/eyebrow_piercing.png",
+        "status": "todo"
+      },
+      {
+        "id": "multiple_facial_piercings",
+        "category": "special",
+        "name": "Multiple Facial Piercings",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/multiple_facial_piercings.png",
+        "status": "todo"
+      },
+      {
+        "id": "gold_nose_ring",
+        "category": "special",
+        "name": "Gold Nose Ring",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/gold_nose_ring.png",
+        "status": "todo"
+      },
+      {
+        "id": "gold_chain",
+        "category": "special",
+        "name": "Gold Chain",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/gold_chain.png",
+        "status": "todo"
+      },
+      {
+        "id": "diamond_chain",
+        "category": "special",
+        "name": "Diamond Chain",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/diamond_chain.png",
+        "status": "todo"
+      },
+      {
+        "id": "cuban_link",
+        "category": "special",
+        "name": "Cuban Link",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/cuban_link.png",
+        "status": "todo"
+      },
+      {
+        "id": "pearl_necklace",
+        "category": "special",
+        "name": "Pearl Necklace",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/pearl_necklace.png",
+        "status": "todo"
+      },
+      {
+        "id": "dog_tag",
+        "category": "special",
+        "name": "Dog Tag",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/dog_tag.png",
+        "status": "todo"
+      },
+      {
+        "id": "bitcoin_pendant",
+        "category": "special",
+        "name": "Bitcoin Pendant",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/bitcoin_pendant.png",
+        "status": "todo"
+      },
+      {
+        "id": "huge_medallion",
+        "category": "special",
+        "name": "Huge Medallion",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/huge_medallion.png",
+        "status": "todo"
+      },
+      {
+        "id": "gold_earrings",
+        "category": "special",
+        "name": "Gold Earrings",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/gold_earrings.png",
+        "status": "todo"
+      },
+      {
+        "id": "diamond_earrings",
+        "category": "special",
+        "name": "Diamond Earrings",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/diamond_earrings.png",
+        "status": "todo"
+      },
+      {
+        "id": "phone",
+        "category": "special",
+        "name": "Phone",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/phone.png",
+        "status": "todo"
+      },
+      {
+        "id": "hardware_wallet",
+        "category": "special",
+        "name": "Hardware Wallet",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/hardware_wallet.png",
+        "status": "todo"
+      },
+      {
+        "id": "ledger_wallet",
+        "category": "special",
+        "name": "Ledger-Style Wallet",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/ledger_wallet.png",
+        "status": "todo"
+      },
+      {
+        "id": "laptop",
+        "category": "special",
+        "name": "Laptop",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/laptop.png",
+        "status": "todo"
+      },
+      {
+        "id": "trading_terminal",
+        "category": "special",
+        "name": "Trading Terminal",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/trading_terminal.png",
+        "status": "todo"
+      },
+      {
+        "id": "green_candles",
+        "category": "special",
+        "name": "Green Candlestick Chart",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/green_candles.png",
+        "status": "todo"
+      },
+      {
+        "id": "red_candles",
+        "category": "special",
+        "name": "Red Candlestick Chart",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/red_candles.png",
+        "status": "todo"
+      },
+      {
+        "id": "bitcoin_coin",
+        "category": "special",
+        "name": "Bitcoin Coin",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/bitcoin_coin.png",
+        "status": "todo"
+      },
+      {
+        "id": "ethereum_coin",
+        "category": "special",
+        "name": "Ethereum Coin",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/ethereum_coin.png",
+        "status": "todo"
+      },
+      {
+        "id": "stack_of_cash",
+        "category": "special",
+        "name": "Stack of Cash",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/stack_of_cash.png",
+        "status": "todo"
+      },
+      {
+        "id": "bag_of_money",
+        "category": "special",
+        "name": "Bag of Money",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/bag_of_money.png",
+        "status": "todo"
+      },
+      {
+        "id": "moon",
+        "category": "special",
+        "name": "Moon",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/moon.png",
+        "status": "todo"
+      },
+      {
+        "id": "rocket",
+        "category": "special",
+        "name": "Rocket",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/rocket.png",
+        "status": "todo"
+      },
+      {
+        "id": "diamond",
+        "category": "special",
+        "name": "Diamond",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/diamond.png",
+        "status": "todo"
+      },
+      {
+        "id": "coffee_cup_prop",
+        "category": "special",
+        "name": "Coffee Cup",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/coffee_cup_prop.png",
+        "status": "todo"
+      },
+      {
+        "id": "energy_drink",
+        "category": "special",
+        "name": "Energy Drink",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/energy_drink.png",
+        "status": "todo"
+      },
+      {
+        "id": "pizza",
+        "category": "special",
+        "name": "Pizza",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/pizza.png",
+        "status": "todo"
+      },
+      {
+        "id": "ramen",
+        "category": "special",
+        "name": "Ramen",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/ramen.png",
+        "status": "todo"
+      },
+      {
+        "id": "tears",
+        "category": "special",
+        "name": "Tears",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/tears.png",
+        "status": "todo"
+      },
+      {
+        "id": "sweat",
+        "category": "special",
+        "name": "Sweat",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/sweat.png",
+        "status": "todo"
+      },
+      {
+        "id": "smoke",
+        "category": "special",
+        "name": "Smoke",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/smoke.png",
+        "status": "todo"
+      },
+      {
+        "id": "flames",
+        "category": "special",
+        "name": "Flames",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/flames.png",
+        "status": "todo"
+      },
+      {
+        "id": "lightning",
+        "category": "special",
+        "name": "Lightning",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/lightning.png",
+        "status": "todo"
+      },
+      {
+        "id": "glitch_effect",
+        "category": "special",
+        "name": "Glitch Effect",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/glitch_effect.png",
+        "status": "todo"
+      },
+      {
+        "id": "pixel_artifacts",
+        "category": "special",
+        "name": "Pixel Artifacts",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/pixel_artifacts.png",
+        "status": "todo"
+      },
+      {
+        "id": "floating_objects",
+        "category": "special",
+        "name": "Floating Objects",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/floating_objects.png",
+        "status": "todo"
+      },
+      {
+        "id": "tiny_pepe",
+        "category": "special",
+        "name": "Tiny Pepe",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/tiny_pepe.png",
+        "status": "todo"
+      },
+      {
+        "id": "tiny_wojak",
+        "category": "special",
+        "name": "Tiny Wojak",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/tiny_wojak.png",
+        "status": "todo"
+      },
+      {
+        "id": "diamond_hands",
+        "category": "special",
+        "name": "Diamond Hands",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/diamond_hands.png",
+        "status": "todo"
+      },
+      {
+        "id": "paper_hands",
+        "category": "special",
+        "name": "Paper Hands",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/paper_hands.png",
+        "status": "todo"
+      },
+      {
+        "id": "gm_sign",
+        "category": "special",
+        "name": "GM Sign",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/gm_sign.png",
+        "status": "todo"
+      },
+      {
+        "id": "gn_sign",
+        "category": "special",
+        "name": "GN Sign",
+        "weight": 10.0,
+        "tier": "uncommon",
+        "source_rel": "special/gn_sign.png",
+        "status": "todo"
+      }
+    ]
+  }
+}

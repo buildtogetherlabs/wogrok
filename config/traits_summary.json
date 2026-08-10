@@ -1,0 +1,15 @@
+{
+  "collection": "WOGROK",
+  "base": "single_immutable_wogrok",
+  "categories": {
+    "background": 2,
+    "eyes": 27,
+    "mouth": 27,
+    "headwear": 35,
+    "clothing": 56,
+    "special": 60
+  },
+  "total_trait_options": 207,
+  "combinatorial_note": "Rough product of category sizes (ignoring none/rules); actual collection size set in rules.json",
+  "raw_combo_space": 171460800
+}
