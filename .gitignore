@@ -27,3 +27,6 @@ manifests/images_sha256.txt
 work/
 output/previews/
 !output/contact_sheets/
+
+# Sample review batches (regenerable)
+output/samples/
