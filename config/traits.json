@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "collection": "WOGROK",
   "philosophy": "One immutable Wogrok DNA. Traits tell the story \u2014 not 25 different Wojaks.",
-  "base_policy": "single_immutable_base",
+  "base_policy": "open_crown_no_eyes",
   "base": {
     "id": "wogrok_base",
     "source_rel": "base/wogrok_base.png",
@@ -20,14 +20,15 @@
       "right pupil larger",
       "tired under-eye bag",
       "blank/deadpan facial energy"
-    ]
+    ],
+    "notes": "No eyes, no crown. Eyes + bald_crown/headwear complete the head."
   },
   "layer_order": [
     "background",
     "base",
+    "eyes",
     "clothing",
     "mouth",
-    "eyes",
     "special",
     "headwear"
   ],
@@ -79,8 +80,9 @@
         "name": "Normal",
         "weight": 40.0,
         "tier": "common",
-        "source_rel": null,
-        "status": "done"
+        "source_rel": "eyes/normal.png",
+        "status": "done",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "sleepy",
@@ -89,7 +91,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/sleepy.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "bloodshot",
@@ -98,7 +101,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/bloodshot.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "crying",
@@ -107,7 +111,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/crying.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "red_eyes",
@@ -116,7 +121,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/red_eyes.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "laser_eyes",
@@ -125,7 +131,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/laser_eyes.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "blacked_out",
@@ -134,7 +141,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/blacked_out.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "x_eyes",
@@ -143,7 +151,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/x_eyes.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "dollar_pupils",
@@ -152,7 +161,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/dollar_pupils.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "bitcoin_pupils",
@@ -161,7 +171,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/bitcoin_pupils.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "heart_pupils",
@@ -170,7 +181,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/heart_pupils.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "spiral_pupils",
@@ -179,7 +191,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/spiral_pupils.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "hypnotized",
@@ -188,7 +201,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/hypnotized.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "anime_eyes",
@@ -197,7 +211,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/anime_eyes.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "googly_eyes",
@@ -206,7 +221,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/googly_eyes.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "pixel_eyes",
@@ -215,7 +231,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/pixel_eyes.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "glasses_3d",
@@ -224,7 +241,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/glasses_3d.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "sunglasses",
@@ -233,7 +251,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/sunglasses.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "pixel_sunglasses",
@@ -242,7 +261,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/pixel_sunglasses.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "vr_goggles",
@@ -251,7 +271,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/vr_goggles.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "night_vision_goggles",
@@ -260,7 +281,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/night_vision_goggles.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "monocle",
@@ -269,7 +291,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/monocle.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "eye_patch",
@@ -278,7 +301,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/eye_patch.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "glitched_eyes",
@@ -287,7 +311,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/glitched_eyes.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "crosshair_eyes",
@@ -296,7 +321,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/crosshair_eyes.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "fire_eyes",
@@ -305,7 +331,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/fire_eyes.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "rainbow_eyes",
@@ -314,7 +341,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "eyes/rainbow_eyes.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       }
     ],
     "mouth": [
@@ -325,7 +353,8 @@
         "weight": 35.0,
         "tier": "common",
         "source_rel": null,
-        "status": "done"
+        "status": "done",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "cigarette",
@@ -334,7 +363,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/cigarette.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "joint",
@@ -343,7 +373,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/joint.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "cigar",
@@ -352,7 +383,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/cigar.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "pipe",
@@ -361,7 +393,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/pipe.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "toothpick",
@@ -370,7 +403,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/toothpick.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "bandana_mouth",
@@ -379,7 +413,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/bandana_mouth.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "surgical_mask",
@@ -388,7 +423,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/surgical_mask.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "gas_mask",
@@ -397,7 +433,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/gas_mask.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "mustache",
@@ -406,7 +443,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/mustache.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "stubble",
@@ -415,7 +453,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/stubble.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "short_beard",
@@ -424,7 +463,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/short_beard.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "full_beard",
@@ -433,7 +473,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/full_beard.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "goatee",
@@ -442,7 +483,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/goatee.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "fu_manchu",
@@ -451,7 +493,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/fu_manchu.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "gold_teeth",
@@ -460,7 +503,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/gold_teeth.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "diamond_teeth",
@@ -469,7 +513,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/diamond_teeth.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "fangs",
@@ -478,7 +523,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/fangs.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "bubble_gum",
@@ -487,7 +533,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/bubble_gum.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "blood",
@@ -496,18 +543,20 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/blood.png",
-        "status": "done"
+        "status": "ok_ink",
+        "layer_type": "ink_overlay"
       }
     ],
     "headwear": [
       {
-        "id": "none",
+        "id": "bald_crown",
         "category": "headwear",
-        "name": "Nothing",
+        "name": "Bald (no hat)",
         "weight": 30.0,
         "tier": "common",
-        "source_rel": null,
-        "status": "done"
+        "source_rel": "headwear/bald_crown.png",
+        "status": "done",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "baseball_cap",
@@ -516,7 +565,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/baseball_cap.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "hodl_cap",
@@ -525,7 +575,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/hodl_cap.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "degen_cap",
@@ -534,7 +585,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/degen_cap.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "trucker_hat",
@@ -543,7 +595,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/trucker_hat.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "beanie",
@@ -552,7 +605,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/beanie.png",
-        "status": "done"
+        "status": "done_v2_proof",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "bucket_hat",
@@ -561,7 +615,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/bucket_hat.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "cowboy_hat",
@@ -570,7 +625,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/cowboy_hat.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "hard_hat",
@@ -579,7 +635,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/hard_hat.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "viking_helmet",
@@ -588,7 +645,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/viking_helmet.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "samurai_helmet",
@@ -597,7 +655,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/samurai_helmet.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "pirate_hat",
@@ -606,7 +665,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/pirate_hat.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "top_hat",
@@ -615,7 +675,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/top_hat.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "fedora",
@@ -624,7 +685,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/fedora.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "crown",
@@ -633,7 +695,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/crown.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "king_crown",
@@ -642,7 +705,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/king_crown.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "wizard_hat",
@@ -651,7 +715,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/wizard_hat.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "santa_hat",
@@ -660,7 +725,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/santa_hat.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "party_hat",
@@ -669,7 +735,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/party_hat.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "astronaut_helmet",
@@ -678,7 +745,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/astronaut_helmet.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "military_helmet",
@@ -687,7 +755,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/military_helmet.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "racing_helmet",
@@ -696,7 +765,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/racing_helmet.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "sombrero",
@@ -705,7 +775,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/sombrero.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "chef_hat",
@@ -714,7 +785,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/chef_hat.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "propeller_hat",
@@ -723,7 +795,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/propeller_hat.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "crypto_maga_hat",
@@ -732,7 +805,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/crypto_maga_hat.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "headband",
@@ -741,7 +815,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/headband.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "bandana",
@@ -750,7 +825,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/bandana.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "halo",
@@ -759,7 +835,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/halo.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "devil_horns",
@@ -768,7 +845,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/devil_horns.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "angel_halo",
@@ -777,7 +855,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/angel_halo.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "crypto_novelty_hat",
@@ -786,7 +865,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/crypto_novelty_hat.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "ngmi_cap",
@@ -795,7 +875,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "headwear/ngmi_cap.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       }
     ],
     "clothing": [
@@ -806,7 +887,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/black_hoodie.png",
-        "status": "done"
+        "status": "done_v2_proof",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "zip_hoodie",
@@ -815,7 +897,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/zip_hoodie.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "oversized_hoodie",
@@ -824,7 +907,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/oversized_hoodie.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "crypto_hoodie",
@@ -833,7 +917,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/crypto_hoodie.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "hodl_hoodie",
@@ -842,7 +927,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/hodl_hoodie.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "ngmi_hoodie",
@@ -851,7 +937,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/ngmi_hoodie.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "rekt_hoodie",
@@ -860,7 +947,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/rekt_hoodie.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "degen_hoodie",
@@ -869,7 +957,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/degen_hoodie.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "tracksuit",
@@ -878,7 +967,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/tracksuit.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "puffer_jacket",
@@ -887,7 +977,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/puffer_jacket.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "bomber_jacket",
@@ -896,7 +987,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/bomber_jacket.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "techwear",
@@ -905,7 +997,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/techwear.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "trading_shirt",
@@ -914,7 +1007,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/trading_shirt.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "crypto_conference_shirt",
@@ -923,7 +1017,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/crypto_conference_shirt.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "gamer_shirt",
@@ -932,7 +1027,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/gamer_shirt.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "gaming_hoodie",
@@ -941,7 +1037,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/gaming_hoodie.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "esports_jersey",
@@ -950,7 +1047,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/esports_jersey.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "meme_tshirt",
@@ -959,7 +1057,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/meme_tshirt.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "hawaiian_shirt",
@@ -968,7 +1067,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/hawaiian_shirt.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "tank_top",
@@ -977,7 +1077,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/tank_top.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "dad_shirt",
@@ -986,7 +1087,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/dad_shirt.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "bathrobe",
@@ -995,7 +1097,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/bathrobe.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "pajamas",
@@ -1004,7 +1107,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/pajamas.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "sweatshirt",
@@ -1013,7 +1117,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/sweatshirt.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "varsity_jacket",
@@ -1022,7 +1127,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/varsity_jacket.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "leather_jacket",
@@ -1031,7 +1137,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/leather_jacket.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "business_suit",
@@ -1040,7 +1147,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/business_suit.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "suit_tie",
@@ -1049,7 +1157,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/suit_tie.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "open_collar_dress_shirt",
@@ -1058,7 +1167,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/open_collar_dress_shirt.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "luxury_robe",
@@ -1067,7 +1177,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/luxury_robe.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "fur_coat",
@@ -1076,7 +1187,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/fur_coat.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "yacht_bro",
@@ -1085,7 +1197,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/yacht_bro.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "casino_tuxedo",
@@ -1094,7 +1207,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/casino_tuxedo.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "casino_shirt",
@@ -1103,7 +1217,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/casino_shirt.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "sleeveless_gym",
@@ -1112,7 +1227,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/sleeveless_gym.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "dirty_undershirt",
@@ -1121,7 +1237,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/dirty_undershirt.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "ramen_stained_hoodie",
@@ -1130,7 +1247,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/ramen_stained_hoodie.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "gambling_jersey",
@@ -1139,7 +1257,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/gambling_jersey.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "all_in_shirt",
@@ -1148,7 +1267,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/all_in_shirt.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "bull_market_shirt",
@@ -1157,7 +1277,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/bull_market_shirt.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "diamond_hands_shirt",
@@ -1166,7 +1287,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/diamond_hands_shirt.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "astronaut",
@@ -1175,7 +1297,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/astronaut.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "cowboy",
@@ -1184,7 +1307,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/cowboy.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "samurai",
@@ -1193,7 +1317,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/samurai.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "knight",
@@ -1202,7 +1327,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/knight.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "pirate",
@@ -1211,7 +1337,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/pirate.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "construction_worker",
@@ -1220,7 +1347,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/construction_worker.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "scientist",
@@ -1229,7 +1357,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/scientist.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "doctor",
@@ -1238,7 +1367,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/doctor.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "military",
@@ -1247,7 +1377,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/military.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "prison_jumpsuit",
@@ -1256,7 +1387,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/prison_jumpsuit.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "cult_robe",
@@ -1265,7 +1397,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/cult_robe.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       },
       {
         "id": "king_robe",
@@ -1274,7 +1407,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/king_robe.png",
-        "status": "done"
+        "status": "needs_v2_rebuild",
+        "layer_type": "opaque_cover"
       }
     ],
     "special": [
@@ -1285,7 +1419,8 @@
         "weight": 45.0,
         "tier": "common",
         "source_rel": null,
-        "status": "done"
+        "status": "done",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "degen_face_tattoo",
@@ -1294,7 +1429,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/degen_face_tattoo.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "bitcoin_tattoo",
@@ -1303,7 +1439,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/bitcoin_tattoo.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "hodl_tattoo",
@@ -1312,7 +1449,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/hodl_tattoo.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "ngmi_tattoo",
@@ -1321,7 +1459,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/ngmi_tattoo.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "rekt_tattoo",
@@ -1330,7 +1469,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/rekt_tattoo.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "teardrop_tattoo",
@@ -1339,7 +1479,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/teardrop_tattoo.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "tribal_tattoo",
@@ -1348,7 +1489,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/tribal_tattoo.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "scar",
@@ -1357,7 +1499,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/scar.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "face_stitches",
@@ -1366,7 +1509,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/face_stitches.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "bandage",
@@ -1375,7 +1519,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/bandage.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "lip_piercing",
@@ -1384,7 +1529,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/lip_piercing.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "multiple_facial_piercings",
@@ -1393,7 +1539,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/multiple_facial_piercings.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "gold_chain",
@@ -1402,7 +1549,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/gold_chain.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "diamond_chain",
@@ -1411,7 +1559,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/diamond_chain.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "cuban_link",
@@ -1420,7 +1569,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/cuban_link.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "pearl_necklace",
@@ -1429,7 +1579,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/pearl_necklace.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "dog_tag",
@@ -1438,7 +1589,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/dog_tag.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "bitcoin_pendant",
@@ -1447,7 +1599,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/bitcoin_pendant.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "gold_earrings",
@@ -1456,7 +1609,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/gold_earrings.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "diamond_earrings",
@@ -1465,7 +1619,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/diamond_earrings.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "hardware_wallet",
@@ -1474,7 +1629,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/hardware_wallet.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "laptop",
@@ -1483,7 +1639,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/laptop.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "trading_terminal",
@@ -1492,7 +1649,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/trading_terminal.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "green_candles",
@@ -1501,7 +1659,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/green_candles.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "red_candles",
@@ -1510,7 +1669,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/red_candles.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "stack_of_cash",
@@ -1519,7 +1679,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/stack_of_cash.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "bag_of_money",
@@ -1528,7 +1689,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/bag_of_money.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "moon",
@@ -1537,7 +1699,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/moon.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "rocket",
@@ -1546,7 +1709,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/rocket.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "coffee_cup_prop",
@@ -1555,7 +1719,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/coffee_cup_prop.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "energy_drink",
@@ -1564,7 +1729,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/energy_drink.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "pizza",
@@ -1573,7 +1739,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/pizza.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "ramen",
@@ -1582,7 +1749,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/ramen.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "tears",
@@ -1591,7 +1759,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/tears.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "smoke",
@@ -1600,7 +1769,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/smoke.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "glitch_effect",
@@ -1609,7 +1779,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/glitch_effect.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "tiny_pepe",
@@ -1618,7 +1789,8 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/tiny_pepe.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       },
       {
         "id": "tiny_wojak",
@@ -1627,8 +1799,21 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/tiny_wojak.png",
-        "status": "done"
+        "status": "ok_ink_pending_qa",
+        "layer_type": "ink_overlay"
       }
     ]
+  },
+  "layer_types": {
+    "opaque_cover": [
+      "eyes",
+      "clothing",
+      "headwear"
+    ],
+    "ink_overlay": [
+      "mouth",
+      "special"
+    ],
+    "notes": "v2 architecture \u2014 see docs/LAYER_ARCHITECTURE.md"
   }
 }

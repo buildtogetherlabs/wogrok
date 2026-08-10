@@ -1,5 +1,9 @@
 # Production guide
 
+> **See [LAYER_ARCHITECTURE.md](LAYER_ARCHITECTURE.md) for v2 opaque vs ink rules.**
+
+# Production guide
+
 ## Layer model
 
 Stack **bottom → top** (clothing always lands cleanly on the base before face props):

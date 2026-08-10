@@ -6,25 +6,37 @@
   "layer_order": [
     "background",
     "base",
+    "eyes",
     "clothing",
     "mouth",
-    "eyes",
     "special",
     "headwear"
   ],
   "anchors": {
     "head_center_x": 0.5,
     "eye_line_y": 0.42,
-    "left_eye_x": 0.40,
-    "right_eye_x": 0.60,
-    "nose_y": 0.50,
+    "left_eye_x": 0.4,
+    "right_eye_x": 0.6,
+    "nose_y": 0.5,
     "mouth_y": 0.56,
     "hat_brim_y": 0.22,
-    "collar_y": 0.70,
-    "shoulder_y": 0.80,
+    "collar_y": 0.7,
+    "shoulder_y": 0.8,
     "notes": "Approximate from base art; refine with drawing_map once skeleton is dialed."
   },
   "background": {
     "fill": true
+  },
+  "layer_types": {
+    "opaque_cover": [
+      "eyes",
+      "clothing",
+      "headwear"
+    ],
+    "ink_overlay": [
+      "mouth",
+      "special"
+    ],
+    "notes": "v2 architecture \u2014 see docs/LAYER_ARCHITECTURE.md"
   }
 }
