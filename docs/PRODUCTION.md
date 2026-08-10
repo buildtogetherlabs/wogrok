@@ -2,6 +2,18 @@
 
 ## Layer model
 
+Stack **bottom → top** (clothing always lands cleanly on the base before face props):
+
+```
+background
+  → base          (immutable DNA)
+  → clothing      (hoodie / shirt — solid fills win over lower face props)
+  → mouth         (beard, cigarette, mask — ink only, no white)
+  → eyes
+  → special
+  → headwear
+```
+
 | Layer | Path | Notes |
 |---|---|---|
 | Background | `layers/background/*.png` | Solid (or simple) fills |
@@ -12,7 +24,12 @@
 | Special | `layers/special/*.png` | Tattoos, chains, props, effects |
 | Headwear | `layers/headwear/*.png` | On skull; clear of face features unless intentional brim |
 
-Stack order is also in `config/traits.json` → `layer_order`.
+**Critical compositing rules**
+1. Clothing is drawn **before** mouth (base → clothing → mouth).
+2. Clothing / mouth / headwear / special layers are **ink-only** (no opaque white). White “erasers” punch holes through layers underneath — only eyes may use erasers for pupil swaps.
+3. When clothing has a solid fill (black hood interior, etc.), mouth/special pixels under that fill are suppressed so clothing still looks like the solo-trait version.
+
+Stack order is also in `config/traits.json` / `config/canvas.json` → `layer_order`.
 
 ## Canvas
 
