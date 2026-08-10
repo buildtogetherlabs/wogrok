@@ -34,10 +34,10 @@
   "counts": {
     "background": 2,
     "eyes": 27,
-    "mouth": 27,
-    "headwear": 35,
-    "clothing": 56,
-    "special": 60
+    "mouth": 20,
+    "headwear": 33,
+    "clothing": 53,
+    "special": 39
   },
   "traits": {
     "background": [
@@ -364,39 +364,12 @@
         "status": "done"
       },
       {
-        "id": "vape",
-        "category": "mouth",
-        "name": "Vape",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "mouth/vape.png",
-        "status": "done"
-      },
-      {
         "id": "toothpick",
         "category": "mouth",
         "name": "Toothpick",
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/toothpick.png",
-        "status": "done"
-      },
-      {
-        "id": "lollipop",
-        "category": "mouth",
-        "name": "Lollipop",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "mouth/lollipop.png",
-        "status": "done"
-      },
-      {
-        "id": "straw",
-        "category": "mouth",
-        "name": "Straw",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "mouth/straw.png",
         "status": "done"
       },
       {
@@ -433,15 +406,6 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/mustache.png",
-        "status": "done"
-      },
-      {
-        "id": "handlebar_mustache",
-        "category": "mouth",
-        "name": "Handlebar Mustache",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "mouth/handlebar_mustache.png",
         "status": "done"
       },
       {
@@ -517,24 +481,6 @@
         "status": "done"
       },
       {
-        "id": "drool",
-        "category": "mouth",
-        "name": "Drool",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "mouth/drool.png",
-        "status": "done"
-      },
-      {
-        "id": "tongue",
-        "category": "mouth",
-        "name": "Tongue",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "mouth/tongue.png",
-        "status": "done"
-      },
-      {
         "id": "bubble_gum",
         "category": "mouth",
         "name": "Bubble Gum",
@@ -550,15 +496,6 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "mouth/blood.png",
-        "status": "done"
-      },
-      {
-        "id": "coffee_cup",
-        "category": "mouth",
-        "name": "Coffee Cup / Straw",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "mouth/coffee_cup.png",
         "status": "done"
       }
     ],
@@ -717,15 +654,6 @@
         "status": "done"
       },
       {
-        "id": "graduation_cap",
-        "category": "headwear",
-        "name": "Graduation Cap",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "headwear/graduation_cap.png",
-        "status": "done"
-      },
-      {
         "id": "santa_hat",
         "category": "headwear",
         "name": "Santa Hat",
@@ -868,15 +796,6 @@
         "tier": "uncommon",
         "source_rel": "headwear/ngmi_cap.png",
         "status": "done"
-      },
-      {
-        "id": "wagmi_cap",
-        "category": "headwear",
-        "name": "WAGMI Cap",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "headwear/wagmi_cap.png",
-        "status": "done"
       }
     ],
     "clothing": [
@@ -923,15 +842,6 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/hodl_hoodie.png",
-        "status": "done"
-      },
-      {
-        "id": "wagmi_hoodie",
-        "category": "clothing",
-        "name": "WAGMI Hoodie",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "clothing/wagmi_hoodie.png",
         "status": "done"
       },
       {
@@ -1079,15 +989,6 @@
         "status": "done"
       },
       {
-        "id": "wife_beater",
-        "category": "clothing",
-        "name": "Wife-Beater",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "clothing/wife_beater.png",
-        "status": "done"
-      },
-      {
         "id": "bathrobe",
         "category": "clothing",
         "name": "Bathrobe",
@@ -1157,15 +1058,6 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "clothing/open_collar_dress_shirt.png",
-        "status": "done"
-      },
-      {
-        "id": "turtleneck",
-        "category": "clothing",
-        "name": "Turtleneck",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "clothing/turtleneck.png",
         "status": "done"
       },
       {
@@ -1432,15 +1324,6 @@
         "status": "done"
       },
       {
-        "id": "wagmi_tattoo",
-        "category": "special",
-        "name": "WAGMI Tattoo",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/wagmi_tattoo.png",
-        "status": "done"
-      },
-      {
         "id": "rekt_tattoo",
         "category": "special",
         "name": "REKT Tattoo",
@@ -1495,33 +1378,6 @@
         "status": "done"
       },
       {
-        "id": "cheek_sticker",
-        "category": "special",
-        "name": "Cheek Sticker",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/cheek_sticker.png",
-        "status": "done"
-      },
-      {
-        "id": "nose_piercing",
-        "category": "special",
-        "name": "Nose Piercing",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/nose_piercing.png",
-        "status": "done"
-      },
-      {
-        "id": "septum_ring",
-        "category": "special",
-        "name": "Septum Ring",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/septum_ring.png",
-        "status": "done"
-      },
-      {
         "id": "lip_piercing",
         "category": "special",
         "name": "Lip Piercing",
@@ -1531,30 +1387,12 @@
         "status": "done"
       },
       {
-        "id": "eyebrow_piercing",
-        "category": "special",
-        "name": "Eyebrow Piercing",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/eyebrow_piercing.png",
-        "status": "done"
-      },
-      {
         "id": "multiple_facial_piercings",
         "category": "special",
         "name": "Multiple Facial Piercings",
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/multiple_facial_piercings.png",
-        "status": "done"
-      },
-      {
-        "id": "gold_nose_ring",
-        "category": "special",
-        "name": "Gold Nose Ring",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/gold_nose_ring.png",
         "status": "done"
       },
       {
@@ -1612,15 +1450,6 @@
         "status": "done"
       },
       {
-        "id": "huge_medallion",
-        "category": "special",
-        "name": "Huge Medallion",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/huge_medallion.png",
-        "status": "done"
-      },
-      {
         "id": "gold_earrings",
         "category": "special",
         "name": "Gold Earrings",
@@ -1639,30 +1468,12 @@
         "status": "done"
       },
       {
-        "id": "phone",
-        "category": "special",
-        "name": "Phone",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/phone.png",
-        "status": "done"
-      },
-      {
         "id": "hardware_wallet",
         "category": "special",
         "name": "Hardware Wallet",
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/hardware_wallet.png",
-        "status": "done"
-      },
-      {
-        "id": "ledger_wallet",
-        "category": "special",
-        "name": "Ledger-Style Wallet",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/ledger_wallet.png",
         "status": "done"
       },
       {
@@ -1702,24 +1513,6 @@
         "status": "done"
       },
       {
-        "id": "bitcoin_coin",
-        "category": "special",
-        "name": "Bitcoin Coin",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/bitcoin_coin.png",
-        "status": "done"
-      },
-      {
-        "id": "ethereum_coin",
-        "category": "special",
-        "name": "Ethereum Coin",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/ethereum_coin.png",
-        "status": "done"
-      },
-      {
         "id": "stack_of_cash",
         "category": "special",
         "name": "Stack of Cash",
@@ -1753,15 +1546,6 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/rocket.png",
-        "status": "done"
-      },
-      {
-        "id": "diamond",
-        "category": "special",
-        "name": "Diamond",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/diamond.png",
         "status": "done"
       },
       {
@@ -1810,15 +1594,6 @@
         "status": "done"
       },
       {
-        "id": "sweat",
-        "category": "special",
-        "name": "Sweat",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/sweat.png",
-        "status": "done"
-      },
-      {
         "id": "smoke",
         "category": "special",
         "name": "Smoke",
@@ -1828,48 +1603,12 @@
         "status": "done"
       },
       {
-        "id": "flames",
-        "category": "special",
-        "name": "Flames",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/flames.png",
-        "status": "done"
-      },
-      {
-        "id": "lightning",
-        "category": "special",
-        "name": "Lightning",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/lightning.png",
-        "status": "done"
-      },
-      {
         "id": "glitch_effect",
         "category": "special",
         "name": "Glitch Effect",
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/glitch_effect.png",
-        "status": "done"
-      },
-      {
-        "id": "pixel_artifacts",
-        "category": "special",
-        "name": "Pixel Artifacts",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/pixel_artifacts.png",
-        "status": "done"
-      },
-      {
-        "id": "floating_objects",
-        "category": "special",
-        "name": "Floating Objects",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/floating_objects.png",
         "status": "done"
       },
       {
@@ -1888,42 +1627,6 @@
         "weight": 10.0,
         "tier": "uncommon",
         "source_rel": "special/tiny_wojak.png",
-        "status": "done"
-      },
-      {
-        "id": "diamond_hands",
-        "category": "special",
-        "name": "Diamond Hands",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/diamond_hands.png",
-        "status": "done"
-      },
-      {
-        "id": "paper_hands",
-        "category": "special",
-        "name": "Paper Hands",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/paper_hands.png",
-        "status": "done"
-      },
-      {
-        "id": "gm_sign",
-        "category": "special",
-        "name": "GM Sign",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/gm_sign.png",
-        "status": "done"
-      },
-      {
-        "id": "gn_sign",
-        "category": "special",
-        "name": "GN Sign",
-        "weight": 10.0,
-        "tier": "uncommon",
-        "source_rel": "special/gn_sign.png",
         "status": "done"
       }
     ]

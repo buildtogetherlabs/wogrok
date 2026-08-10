@@ -83,7 +83,8 @@ scripts/                   # generate / preview (coming next)
 - [x] Repo + design DNA
 - [x] Trait catalog (eyes / mouth / headwear / clothing / special)
 - [x] Base character locked in
-- [x] All individual trait layers drawn (201)
+- [x] All individual trait layers drawn
+- [x] Culled to kept previews (168 drawable traits)
 - [x] Contact sheets + combo previews
 - [x] Compose preview script
 - [ ] Transparent base isolation for non-white backgrounds

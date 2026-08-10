@@ -4,12 +4,148 @@
   "categories": {
     "background": 2,
     "eyes": 27,
-    "mouth": 27,
-    "headwear": 35,
-    "clothing": 56,
-    "special": 60
+    "mouth": 20,
+    "headwear": 33,
+    "clothing": 53,
+    "special": 39
   },
-  "total_trait_options": 207,
-  "combinatorial_note": "Rough product of category sizes (ignoring none/rules); actual collection size set in rules.json",
-  "raw_combo_space": 171460800
+  "total_trait_options": 174,
+  "drawable_traits": 168,
+  "raw_combo_space": 73667880,
+  "culled_from_previews": true,
+  "removed_count": 33,
+  "removed": [
+    {
+      "category": "mouth",
+      "id": "vape"
+    },
+    {
+      "category": "mouth",
+      "id": "lollipop"
+    },
+    {
+      "category": "mouth",
+      "id": "straw"
+    },
+    {
+      "category": "mouth",
+      "id": "handlebar_mustache"
+    },
+    {
+      "category": "mouth",
+      "id": "drool"
+    },
+    {
+      "category": "mouth",
+      "id": "tongue"
+    },
+    {
+      "category": "mouth",
+      "id": "coffee_cup"
+    },
+    {
+      "category": "headwear",
+      "id": "graduation_cap"
+    },
+    {
+      "category": "headwear",
+      "id": "wagmi_cap"
+    },
+    {
+      "category": "clothing",
+      "id": "wagmi_hoodie"
+    },
+    {
+      "category": "clothing",
+      "id": "wife_beater"
+    },
+    {
+      "category": "clothing",
+      "id": "turtleneck"
+    },
+    {
+      "category": "special",
+      "id": "wagmi_tattoo"
+    },
+    {
+      "category": "special",
+      "id": "cheek_sticker"
+    },
+    {
+      "category": "special",
+      "id": "nose_piercing"
+    },
+    {
+      "category": "special",
+      "id": "septum_ring"
+    },
+    {
+      "category": "special",
+      "id": "eyebrow_piercing"
+    },
+    {
+      "category": "special",
+      "id": "gold_nose_ring"
+    },
+    {
+      "category": "special",
+      "id": "huge_medallion"
+    },
+    {
+      "category": "special",
+      "id": "phone"
+    },
+    {
+      "category": "special",
+      "id": "ledger_wallet"
+    },
+    {
+      "category": "special",
+      "id": "bitcoin_coin"
+    },
+    {
+      "category": "special",
+      "id": "ethereum_coin"
+    },
+    {
+      "category": "special",
+      "id": "diamond"
+    },
+    {
+      "category": "special",
+      "id": "sweat"
+    },
+    {
+      "category": "special",
+      "id": "flames"
+    },
+    {
+      "category": "special",
+      "id": "lightning"
+    },
+    {
+      "category": "special",
+      "id": "pixel_artifacts"
+    },
+    {
+      "category": "special",
+      "id": "floating_objects"
+    },
+    {
+      "category": "special",
+      "id": "diamond_hands"
+    },
+    {
+      "category": "special",
+      "id": "paper_hands"
+    },
+    {
+      "category": "special",
+      "id": "gm_sign"
+    },
+    {
+      "category": "special",
+      "id": "gn_sign"
+    }
+  ]
 }
