@@ -23,3 +23,7 @@ manifests/images_sha256.txt
 
 .env
 .env.*
+
+work/
+output/previews/
+!output/contact_sheets/

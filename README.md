@@ -83,9 +83,11 @@ scripts/                   # generate / preview (coming next)
 - [x] Repo + design DNA
 - [x] Trait catalog (eyes / mouth / headwear / clothing / special)
 - [x] Base character locked in
-- [ ] Transparent body isolation + drawing map
-- [ ] Trait art pipeline
-- [ ] Generate / metadata scripts
+- [x] All individual trait layers drawn (201)
+- [x] Contact sheets + combo previews
+- [x] Compose preview script
+- [ ] Transparent base isolation for non-white backgrounds
+- [ ] Collection generator + metadata
 - [ ] Collection size + rarity weights finalized
 
 ## Related
