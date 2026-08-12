@@ -1,15 +1,17 @@
 {
   "collection": "Stonkboyz",
   "symbol": "STONK",
-  "description": "One tired Stonkboy. 3,333 lives. Traits tell the story.",
-  "supply": 3333,
-  "seed": 33330812,
+  "description": "One tired Stonkboy. 2,222 lives. Traits tell the story.",
+  "supply": 2222,
+  "seed": 22220812,
+  "alien_nose_count": 22,
   "width": 1000,
   "height": 1000,
   "layer_order": [
     "background",
     "clothes",
     "head",
+    "nose",
     "mouth",
     "eyes",
     "headwear"
@@ -24,6 +26,26 @@
       "id": "cowboy_neckerchief",
       "when": { "clothes": "Cowboy", "mouth": "Bandana" },
       "reason": "Cowboy already has a neckerchief."
+    },
+    {
+      "id": "beanie_eyewear",
+      "when": { "headwear": "Beanie", "eyes": ["Pixel Glasses", "Aviator", "3D Glasses", "VR", "Monocle"] },
+      "reason": "Beanie clips glasses temples."
+    },
+    {
+      "id": "cowboy_eyewear",
+      "when": { "headwear": "Cowboy Hat", "eyes": ["Pixel Glasses", "Aviator", "3D Glasses", "VR"] },
+      "reason": "Cowboy hat brim cuts through sunglasses."
+    },
+    {
+      "id": "bucket_eyewear",
+      "when": { "headwear": "Bucket Hat", "eyes": ["Pixel Glasses", "Aviator", "3D Glasses", "VR"] },
+      "reason": "Bucket brim cuts through sunglasses."
+    },
+    {
+      "id": "military_eyewear",
+      "when": { "headwear": "Military Degen", "eyes": ["Pixel Glasses", "Aviator", "3D Glasses", "VR"] },
+      "reason": "Helmet brim cuts through sunglasses."
     }
   ],
   "rarity_notes": "Weights are relative inside each layer. Probability = weight / sum(layer). None headwear is first-class so the album-cover bald look can mint.",
@@ -62,12 +84,15 @@
     "head": [
       { "id": "Head", "file": "03-head/Head.png", "weight": 1, "tier": "base", "always": true }
     ],
+    "nose": [
+      { "id": "Standard", "file": "03-head/Nose.png", "weight": 1, "tier": "base" },
+      { "id": "Alien", "file": null, "weight": 0, "tier": "legendary" }
+    ],
     "mouth": [
       { "id": "Standard Deviation", "file": "04-mouth/Standard Deviation.png", "weight": 40, "tier": "common" },
       { "id": "Toothpick", "file": "04-mouth/Toothpick.png", "weight": 18, "tier": "common" },
       { "id": "Piercing", "file": "04-mouth/Piercing.png", "weight": 14, "tier": "common" },
       { "id": "Stitches", "file": "04-mouth/Stitches.png", "weight": 8, "tier": "uncommon" },
-      { "id": "Bandage", "file": "04-mouth/Bandage.png", "weight": 8, "tier": "uncommon" },
       { "id": "Pipe", "file": "04-mouth/Pipe.png", "weight": 7, "tier": "uncommon" },
       { "id": "Green Gainz", "file": "04-mouth/Green Gainz_.png", "weight": 4, "tier": "rare" },
       { "id": "Total Loss", "file": "04-mouth/Total Loss.png", "weight": 3, "tier": "rare" },

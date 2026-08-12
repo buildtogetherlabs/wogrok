@@ -30,10 +30,13 @@ OUTPUT = ROOT / "output"
 TRAIT_TYPES = {
     "background": "Background",
     "clothes": "Clothes",
+    "nose": "Nose",
     "mouth": "Mouth",
     "eyes": "Eyes",
     "headwear": "Headwear",
 }
+
+DNA_LAYERS = ("background", "clothes", "nose", "mouth", "eyes", "headwear")
 
 
 def load_config(path: Path = CONFIG) -> dict:
@@ -52,13 +55,20 @@ def pick(traits: list[dict], rng: random.Random) -> dict:
     return rng.choices(traits, weights=weights, k=1)[0]
 
 
-def dna_key(pick: dict[str, dict]) -> tuple[str, ...]:
-    return tuple(pick[k]["id"] for k in ("background", "clothes", "mouth", "eyes", "headwear"))
+def dna_key(picked: dict[str, dict]) -> tuple[str, ...]:
+    return tuple(picked[k]["id"] for k in DNA_LAYERS)
 
 
-def conflicts_with(pick: dict[str, dict], rules: list[dict]) -> str | None:
+def _matches(picked: dict[str, dict], layer: str, value) -> bool:
+    got = picked[layer]["id"]
+    if isinstance(value, list):
+        return got in value
+    return got == value
+
+
+def conflicts_with(picked: dict[str, dict], rules: list[dict]) -> str | None:
     for rule in rules:
-        if all(pick[layer]["id"] == value for layer, value in rule["when"].items()):
+        if all(_matches(picked, layer, value) for layer, value in rule["when"].items()):
             return rule["id"]
     return None
 
@@ -66,11 +76,13 @@ def conflicts_with(pick: dict[str, dict], rules: list[dict]) -> str | None:
 def sample_token(cfg: dict, rng: random.Random) -> dict[str, dict]:
     layers = cfg["layers"]
     rules = cfg["conflicts"]
+    nose_standard = next(t for t in layers["nose"] if t["id"] == "Standard")
     for _ in range(200):
         picked = {
             "background": pick(layers["background"], rng),
             "clothes": pick(layers["clothes"], rng),
             "head": layers["head"][0],
+            "nose": nose_standard,
             "mouth": pick(layers["mouth"], rng),
             "eyes": pick(layers["eyes"], rng),
             "headwear": pick(layers["headwear"], rng),
@@ -78,6 +90,24 @@ def sample_token(cfg: dict, rng: random.Random) -> dict[str, dict]:
         if conflicts_with(picked, rules) is None:
             return picked
     raise RuntimeError("could not sample a conflict-free token")
+
+
+def assign_alien_noses(picks: list[dict[str, dict]], cfg: dict, rng: random.Random) -> None:
+    """Exactly N tokens get no nose. Prefer faces where the missing nose is visible."""
+    n = int(cfg.get("alien_nose_count", 0))
+    if n <= 0:
+        return
+    alien = next(t for t in cfg["layers"]["nose"] if t["id"] == "Alien")
+    visible = [
+        i
+        for i, p in enumerate(picks)
+        if p["mouth"]["id"] != "Bandana"
+    ]
+    if len(visible) < n:
+        visible = list(range(len(picks)))
+    chosen = set(rng.sample(visible, n))
+    for i in chosen:
+        picks[i]["nose"] = alien
 
 
 def load_layer_images(cfg: dict, layers_dir: Path = LAYERS) -> dict[str, Image.Image]:
@@ -114,7 +144,7 @@ def compose(picked: dict[str, dict], cache: dict[str, Image.Image], order: list[
 def token_metadata(cfg: dict, token_id: int, picked: dict[str, dict], score: float) -> dict:
     attrs = [
         {"trait_type": TRAIT_TYPES[k], "value": picked[k]["id"]}
-        for k in ("background", "clothes", "mouth", "eyes", "headwear")
+        for k in DNA_LAYERS
     ]
     attrs.append({"trait_type": "Tier", "value": token_tier(picked)})
     return {
@@ -144,10 +174,15 @@ def expected_pct(trait: dict, layer_traits: list[dict]) -> float:
 def rarity_score(picked: dict[str, dict], cfg: dict) -> float:
     """Higher = rarer. Sum of 1/p for each visible trait."""
     score = 0.0
+    supply = float(cfg["supply"])
     for layer in TRAIT_TYPES:
         traits = cfg["layers"][layer]
         t = picked[layer]
-        p = float(t["weight"]) / sum(float(x["weight"]) for x in traits)
+        if layer == "nose" and t["id"] == "Alien":
+            p = float(cfg.get("alien_nose_count", 1)) / supply
+        else:
+            total_w = sum(float(x["weight"]) for x in traits) or 1.0
+            p = max(float(t["weight"]) / total_w, 1.0 / supply)
         score += 1.0 / p
     return score
 
@@ -197,8 +232,15 @@ def write_report(cfg: dict, tokens: list[dict], rejected: int, out: Path) -> Non
         lines += ["", f"## {label}", "", "| Trait | Tier | Weight | Expected | Actual | Δ |", "|---|---|---:|---:|---:|---:|"]
         for t in traits:
             actual = counts[layer][t["id"]]
-            exp_pct = expected_pct(t, traits)
-            exp_n = exp_pct / 100.0 * total
+            if layer == "nose" and t["id"] == "Alien":
+                exp_n = float(cfg.get("alien_nose_count", 0))
+                exp_pct = 100.0 * exp_n / total
+            elif layer == "nose" and t["id"] == "Standard":
+                exp_n = float(total - int(cfg.get("alien_nose_count", 0)))
+                exp_pct = 100.0 * exp_n / total
+            else:
+                exp_pct = expected_pct(t, traits)
+                exp_n = exp_pct / 100.0 * total
             act_pct = 100.0 * actual / total
             lines.append(
                 f"| {t['id']} | {t['tier']} | {t['weight']} | "
@@ -230,14 +272,20 @@ def generate(cfg: dict, layers_dir: Path = LAYERS, output_dir: Path = OUTPUT) ->
 
     images_dir = output_dir / "images"
     meta_dir = output_dir / "metadata"
+    if images_dir.exists():
+        for old in images_dir.glob("*.png"):
+            old.unlink()
+    if meta_dir.exists():
+        for old in meta_dir.glob("*.json"):
+            old.unlink()
     images_dir.mkdir(parents=True, exist_ok=True)
     meta_dir.mkdir(parents=True, exist_ok=True)
 
     seen: set[tuple[str, ...]] = set()
-    tokens: list[dict] = []
+    picks: list[dict[str, dict]] = []
     rejected = 0
     attempts = 0
-    while len(tokens) < supply:
+    while len(picks) < supply:
         attempts += 1
         if attempts > supply * 50:
             raise RuntimeError("too many sampling attempts")
@@ -247,11 +295,15 @@ def generate(cfg: dict, layers_dir: Path = LAYERS, output_dir: Path = OUTPUT) ->
             rejected += 1
             continue
         seen.add(key)
-        token_id = len(tokens) + 1
+        picks.append(picked)
+
+    assign_alien_noses(picks, cfg, rng)
+
+    tokens: list[dict] = []
+    for token_id, picked in enumerate(picks, start=1):
         score = rarity_score(picked, cfg)
         img = compose(picked, cache, cfg["layer_order"])
-        img_path = images_dir / f"{token_id:04d}.png"
-        img.save(img_path, format="PNG")
+        img.save(images_dir / f"{token_id:04d}.png", format="PNG")
         meta = token_metadata(cfg, token_id, picked, score)
         (meta_dir / f"{token_id:04d}.json").write_text(json.dumps(meta, indent=2) + "\n")
         tokens.append(meta)
