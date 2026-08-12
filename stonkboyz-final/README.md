@@ -1,7 +1,31 @@
-# Stonkboyz — final trait pack
+# Stonkboyz — final trait pack + 3,333 generate
 
-Artist-final 1000×1000 RGBA layers for the Stonkboyz collection.
+Artist-final 1000×1000 RGBA layers and a generated 3,333-supply collection.
 This folder is an **add-only drop**. It does not replace the original WOGROK `layers/` set.
+
+## Collection
+
+| | |
+|---|---|
+| Supply | **3,333** |
+| Seed | `33330812` (reproducible) |
+| Unique DNA | 3,333 / 3,333 |
+| Bald / None hat | **940** (28.2%) |
+| Conflict violations | **0** |
+
+Images live locally (not in git — ~627 MB):
+
+```
+stonkboyz-final/output/images/0001.png … 3333.png
+stonkboyz-final/output/metadata/0001.json …
+stonkboyz-final/output/collection.json
+```
+
+Regenerate:
+
+```bash
+.venv/bin/python stonkboyz-final/scripts/generate_collection.py
+```
 
 ## Stack (bottom → top)
 
@@ -11,41 +35,44 @@ This folder is an **add-only drop**. It does not replace the original WOGROK `la
   + 03-head
   + 04-mouth
   + 05-eyes
-  + 06-headwear
+  + 06-headwear   ← skipped when Headwear = None
 ```
 
-`head → clothes` also works; collars are cut to the same neck hole. Previews in `previews/` use `background → clothes → head → mouth → eyes → headwear`.
+## Locked conflicts
 
-## Counts
+- Mouth `Bandana` × Headwear `Bandana`
+- Clothes `Cowboy` × Mouth `Bandana`
 
-| Layer | Usable files |
-|---|---|
-| Background | 3 |
-| Clothes | 24 |
-| Head | 1 (blank oval — no eyes, no mouth) |
-| Mouth | 9 |
-| Eyes | 17 |
-| Headwear | 20 |
-| **Raw combo space** | **220,320** |
+## Rarity (proposed + used)
 
-Plenty of unique DNA for a 3,333–10,000 collection.
+Weights are relative inside each layer. Full expected-vs-actual table: [`RARITY.md`](RARITY.md).
 
-## Notes from the 2026-08-12 intake
+Headline odds on 3,333:
 
-- Every file is 1000×1000 PNG with alpha. Alignment is good — these composite cleanly.
-- Dropped `Green Gainz .png` (0 bytes). The real trait is `04-mouth/Green Gainz_.png`.
-- Head is a closed bald oval. Every mint needs a mouth trait (`Standard Deviation` is the deadpan default).
-- There is **no Bald / None headwear**. Every random mint currently gets a hat. Add a None option if bald characters (album-cover look) should exist.
-- Suggested conflict rules before a full generate:
-  - Mouth `Bandana` × Headwear `Bandana`
-  - Clothes `Cowboy` (already has a neckerchief) × Mouth `Bandana`
-- No dedicated headphones / cigarette-only accessory layer. Album-cover vibe is closest to: PNL Green + Crypto Hoodie + Toothpick + Unimpressed + no hat.
+| Trait | Tier | Actual |
+|---|---|---|
+| Headwear None (bald) | common | 940 (28.2%) |
+| Standard Deviation mouth | common | 1,171 (35.1%) |
+| Unimpressed eyes | common | 602 (18.1%) |
+| Cult Robe | legendary | 17 (0.5%) |
+| Taco Trade hat | legendary | 27 (0.8%) |
+| Laser Eyez | epic | 58 (1.7%) |
+| King / Knight / Tuxedo | epic | 37 / 36 / 39 |
+
+Common shirts (Dad / Stonks / All In / Jacket / Business Suit) are ~8% each. Legendary clothes and hats sit under 1%.
+
+## Notes
+
+- `Green Gainz .png` was 0 bytes and was dropped. Display name is **Green Gainz** (`04-mouth/Green Gainz_.png`).
+- Beanie is a slouch cut — it covers the eye line. That is in the art, not a compose bug.
+- No headphones layer, so the exact album-cover look cannot mint. Closest is Crypto Hoodie + Toothpick + Unimpressed + None.
 
 ## Status
 
-- [x] Layers received and stored here
-- [x] Sample composites (see `previews/`)
-- [ ] Collection size + rarity weights
-- [ ] None/Bald headwear decision
-- [ ] Conflict rules locked
-- [ ] Full generate + metadata
+- [x] Layers stored here
+- [x] None / Bald headwear
+- [x] Rarity weights
+- [x] Conflicts locked
+- [x] 3,333 generate + metadata
+- [ ] IPFS / reveal URI
+- [ ] On-chain mint

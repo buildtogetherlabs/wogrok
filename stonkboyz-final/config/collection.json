@@ -1,0 +1,119 @@
+{
+  "collection": "Stonkboyz",
+  "symbol": "STONK",
+  "description": "One tired Stonkboy. 3,333 lives. Traits tell the story.",
+  "supply": 3333,
+  "seed": 33330812,
+  "width": 1000,
+  "height": 1000,
+  "layer_order": [
+    "background",
+    "clothes",
+    "head",
+    "mouth",
+    "eyes",
+    "headwear"
+  ],
+  "conflicts": [
+    {
+      "id": "double_bandana",
+      "when": { "mouth": "Bandana", "headwear": "Bandana" },
+      "reason": "Two bandanas on the same face."
+    },
+    {
+      "id": "cowboy_neckerchief",
+      "when": { "clothes": "Cowboy", "mouth": "Bandana" },
+      "reason": "Cowboy already has a neckerchief."
+    }
+  ],
+  "rarity_notes": "Weights are relative inside each layer. Probability = weight / sum(layer). None headwear is first-class so the album-cover bald look can mint.",
+  "layers": {
+    "background": [
+      { "id": "PNL Standard", "file": "01-background/PNL Standard.png", "weight": 60, "tier": "common" },
+      { "id": "PNL Green", "file": "01-background/PNL Green.png", "weight": 25, "tier": "uncommon" },
+      { "id": "PNL Red", "file": "01-background/PNL Red.png", "weight": 15, "tier": "rare" }
+    ],
+    "clothes": [
+      { "id": "Dad Shirt", "file": "02-clothes/Dad Shirt.png", "weight": 14, "tier": "common" },
+      { "id": "Stonks Shirt", "file": "02-clothes/Stonks Shirt.png", "weight": 14, "tier": "common" },
+      { "id": "All In", "file": "02-clothes/All In.png", "weight": 14, "tier": "common" },
+      { "id": "Jacket", "file": "02-clothes/Jacket.png", "weight": 14, "tier": "common" },
+      { "id": "Business Suit", "file": "02-clothes/Business Suit.png", "weight": 14, "tier": "common" },
+      { "id": "Crypto Conference", "file": "02-clothes/Crypto Conference.png", "weight": 8, "tier": "uncommon" },
+      { "id": "Crypto Hoodie", "file": "02-clothes/Crypto Hoodie.png", "weight": 8, "tier": "uncommon" },
+      { "id": "Diamond Hands", "file": "02-clothes/Diamond Hands.png", "weight": 8, "tier": "uncommon" },
+      { "id": "Track Suit", "file": "02-clothes/Track Suit.png", "weight": 8, "tier": "uncommon" },
+      { "id": "Jersey", "file": "02-clothes/Jersey.png", "weight": 8, "tier": "uncommon" },
+      { "id": "Doctor", "file": "02-clothes/Doctor.png", "weight": 8, "tier": "uncommon" },
+      { "id": "Cowboy", "file": "02-clothes/Cowboy.png", "weight": 8, "tier": "uncommon" },
+      { "id": "Casino Shirt", "file": "02-clothes/Casino Shirt.png", "weight": 4, "tier": "rare" },
+      { "id": "Bull Market", "file": "02-clothes/Bull Market.png", "weight": 4, "tier": "rare" },
+      { "id": "Bathrobe", "file": "02-clothes/Bathrobe.png", "weight": 4, "tier": "rare" },
+      { "id": "Astronaut", "file": "02-clothes/Astronaut.png", "weight": 4, "tier": "rare" },
+      { "id": "Degen Hoodie", "file": "02-clothes/Degen Hoodie.png", "weight": 4, "tier": "rare" },
+      { "id": "Puffer Jacket", "file": "02-clothes/Puffer Jacket.png", "weight": 4, "tier": "rare" },
+      { "id": "Gainz Tech", "file": "02-clothes/Gainz Tech.png", "weight": 4, "tier": "rare" },
+      { "id": "Tuxedo", "file": "02-clothes/Tuxedo.png", "weight": 2, "tier": "epic" },
+      { "id": "Luxury Robe", "file": "02-clothes/Luxury Robe.png", "weight": 2, "tier": "epic" },
+      { "id": "King", "file": "02-clothes/King.png", "weight": 2, "tier": "epic" },
+      { "id": "Knight", "file": "02-clothes/Knight.png", "weight": 2, "tier": "epic" },
+      { "id": "Cult Robe", "file": "02-clothes/Cult Robe.png", "weight": 1, "tier": "legendary" }
+    ],
+    "head": [
+      { "id": "Head", "file": "03-head/Head.png", "weight": 1, "tier": "base", "always": true }
+    ],
+    "mouth": [
+      { "id": "Standard Deviation", "file": "04-mouth/Standard Deviation.png", "weight": 40, "tier": "common" },
+      { "id": "Toothpick", "file": "04-mouth/Toothpick.png", "weight": 18, "tier": "common" },
+      { "id": "Piercing", "file": "04-mouth/Piercing.png", "weight": 14, "tier": "common" },
+      { "id": "Stitches", "file": "04-mouth/Stitches.png", "weight": 8, "tier": "uncommon" },
+      { "id": "Bandage", "file": "04-mouth/Bandage.png", "weight": 8, "tier": "uncommon" },
+      { "id": "Pipe", "file": "04-mouth/Pipe.png", "weight": 7, "tier": "uncommon" },
+      { "id": "Green Gainz", "file": "04-mouth/Green Gainz_.png", "weight": 4, "tier": "rare" },
+      { "id": "Total Loss", "file": "04-mouth/Total Loss.png", "weight": 3, "tier": "rare" },
+      { "id": "Bandana", "file": "04-mouth/Bandana.png", "weight": 3, "tier": "rare" }
+    ],
+    "eyes": [
+      { "id": "Unimpressed", "file": "05-eyes/Unimpressed.png", "weight": 22, "tier": "common" },
+      { "id": "Impressed", "file": "05-eyes/Impressed.png", "weight": 16, "tier": "common" },
+      { "id": "Alien", "file": "05-eyes/Alien.png", "weight": 10, "tier": "uncommon" },
+      { "id": "Blood Shot", "file": "05-eyes/Blood Shot.png", "weight": 7, "tier": "uncommon" },
+      { "id": "Red Eyez", "file": "05-eyes/Red Eyez.png", "weight": 6, "tier": "uncommon" },
+      { "id": "Love", "file": "05-eyes/Love.png", "weight": 6, "tier": "uncommon" },
+      { "id": "No Cry", "file": "05-eyes/No Cry.png", "weight": 6, "tier": "uncommon" },
+      { "id": "Sniper", "file": "05-eyes/Sniper.png", "weight": 5, "tier": "uncommon" },
+      { "id": "X Eyez", "file": "05-eyes/X Eyez.png", "weight": 5, "tier": "uncommon" },
+      { "id": "Eye Patch", "file": "05-eyes/Eye Patch.png", "weight": 5, "tier": "uncommon" },
+      { "id": "Aviator", "file": "05-eyes/Aviator.png", "weight": 5, "tier": "uncommon" },
+      { "id": "Blacked Out", "file": "05-eyes/Blacked Out.png", "weight": 4, "tier": "rare" },
+      { "id": "Pixel Glasses", "file": "05-eyes/Pixel Glasses.png", "weight": 4, "tier": "rare" },
+      { "id": "3D Glasses", "file": "05-eyes/3D Glasses.png", "weight": 3, "tier": "rare" },
+      { "id": "Monocle", "file": "05-eyes/Monocle.png", "weight": 3, "tier": "rare" },
+      { "id": "VR", "file": "05-eyes/VR.png", "weight": 2, "tier": "epic" },
+      { "id": "Laser Eyez", "file": "05-eyes/Laser Eyez.png", "weight": 2, "tier": "epic" }
+    ],
+    "headwear": [
+      { "id": "None", "file": null, "weight": 40, "tier": "common" },
+      { "id": "Headband White", "file": "06-headwear/Headband White.png", "weight": 8, "tier": "common" },
+      { "id": "Baseball Cap White", "file": "06-headwear/Baseball Cap White.png", "weight": 8, "tier": "common" },
+      { "id": "Headband Green", "file": "06-headwear/Headband Green.png", "weight": 7, "tier": "common" },
+      { "id": "Baseball Cap Green", "file": "06-headwear/Baseball Cap Green.png", "weight": 7, "tier": "common" },
+      { "id": "Beanie", "file": "06-headwear/Beanie.png", "weight": 7, "tier": "uncommon" },
+      { "id": "Bucket Hat", "file": "06-headwear/Bucket Hat.png", "weight": 6, "tier": "uncommon" },
+      { "id": "Bandana", "file": "06-headwear/Bandana.png", "weight": 5, "tier": "uncommon" },
+      { "id": "Fedora", "file": "06-headwear/Fedora.png", "weight": 5, "tier": "uncommon" },
+      { "id": "Cowboy Hat", "file": "06-headwear/Cowboy Hat.png", "weight": 5, "tier": "uncommon" },
+      { "id": "NGMI Cap", "file": "06-headwear/NGMI Cap.png", "weight": 4, "tier": "rare" },
+      { "id": "Lil Trader", "file": "06-headwear/Lil Trader.png", "weight": 4, "tier": "rare" },
+      { "id": "Military Degen", "file": "06-headwear/Military Degen.png", "weight": 3, "tier": "rare" },
+      { "id": "Santa", "file": "06-headwear/Santa.png", "weight": 3, "tier": "rare" },
+      { "id": "Devil", "file": "06-headwear/Devil.png", "weight": 3, "tier": "rare" },
+      { "id": "Crown", "file": "06-headwear/Crown.png", "weight": 2, "tier": "epic" },
+      { "id": "Fanboy", "file": "06-headwear/Fanboy.png", "weight": 2, "tier": "epic" },
+      { "id": "Let Him Cook", "file": "06-headwear/Let Him Cook.png", "weight": 2, "tier": "epic" },
+      { "id": "Stonks General", "file": "06-headwear/Stonks General.png", "weight": 2, "tier": "epic" },
+      { "id": "Viking Hodl", "file": "06-headwear/Viking Hodl.png", "weight": 2, "tier": "epic" },
+      { "id": "Taco Trade", "file": "06-headwear/Taco Trade.png", "weight": 1, "tier": "legendary" }
+    ]
+  }
+}
