@@ -77,6 +77,7 @@ def sample_token(cfg: dict, rng: random.Random) -> dict[str, dict]:
     layers = cfg["layers"]
     rules = cfg["conflicts"]
     nose_standard = next(t for t in layers["nose"] if t["id"] == "Standard")
+    head_standard = next(t for t in layers["head"] if t["id"] == "Standard")
     eyes_none = next(t for t in layers["eyes"] if t["id"] == "None")
     eyes_pool = [t for t in layers["eyes"] if t["id"] != "None"]
     for _ in range(200):
@@ -84,7 +85,7 @@ def sample_token(cfg: dict, rng: random.Random) -> dict[str, dict]:
         picked = {
             "background": pick(layers["background"], rng),
             "clothes": pick(layers["clothes"], rng),
-            "head": layers["head"][0],
+            "head": head_standard,
             "nose": nose_standard,
             "mouth": pick(layers["mouth"], rng),
             "eyes": eyes_none if hat["id"] == "Beanie" else pick(eyes_pool, rng),
@@ -101,6 +102,7 @@ def assign_alien_noses(picks: list[dict[str, dict]], cfg: dict, rng: random.Rand
     if n <= 0:
         return
     alien = next(t for t in cfg["layers"]["nose"] if t["id"] == "Alien")
+    head_alien = next(t for t in cfg["layers"]["head"] if t["id"] == "Alien")
     visible = [
         i
         for i, p in enumerate(picks)
@@ -111,6 +113,7 @@ def assign_alien_noses(picks: list[dict[str, dict]], cfg: dict, rng: random.Rand
     chosen = set(rng.sample(visible, n))
     for i in chosen:
         picks[i]["nose"] = alien
+        picks[i]["head"] = head_alien
 
 
 def load_layer_images(cfg: dict, layers_dir: Path = LAYERS) -> dict[str, Image.Image]:

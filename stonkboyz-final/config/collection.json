@@ -3,7 +3,7 @@
   "symbol": "STONK",
   "description": "One tired Stonkboy. 2,222 lives. Traits tell the story.",
   "supply": 2222,
-  "seed": 22220812,
+  "seed": 22220813,
   "alien_nose_count": 22,
   "width": 1000,
   "height": 1000,
@@ -82,10 +82,11 @@
       { "id": "Cult Robe", "file": "02-clothes/Cult Robe.png", "weight": 1, "tier": "legendary" }
     ],
     "head": [
-      { "id": "Head", "file": "03-head/Head.png", "weight": 1, "tier": "base", "always": true }
+      { "id": "Standard", "file": "03-head/Head.png", "weight": 1, "tier": "base", "always": true },
+      { "id": "Alien", "file": "03-head/Head_blank.png", "weight": 0, "tier": "legendary" }
     ],
     "nose": [
-      { "id": "Standard", "file": "03-head/Nose.png", "weight": 1, "tier": "base" },
+      { "id": "Standard", "file": null, "weight": 1, "tier": "base" },
       { "id": "Alien", "file": null, "weight": 0, "tier": "legendary" }
     ],
     "mouth": [
@@ -124,7 +125,7 @@
       { "id": "Baseball Cap White", "file": "06-headwear/Baseball Cap White.png", "weight": 8, "tier": "common" },
       { "id": "Headband Green", "file": "06-headwear/Headband Green.png", "weight": 7, "tier": "common" },
       { "id": "Baseball Cap Green", "file": "06-headwear/Baseball Cap Green.png", "weight": 7, "tier": "common" },
-      { "id": "Beanie", "file": "06-headwear/Beanie.png", "weight": 7, "tier": "uncommon" },
+      { "id": "Beanie", "file": "06-headwear/Beanie.png", "weight": 2, "tier": "rare" },
       { "id": "Bucket Hat", "file": "06-headwear/Bucket Hat.png", "weight": 6, "tier": "uncommon" },
       { "id": "Bandana", "file": "06-headwear/Bandana.png", "weight": 5, "tier": "uncommon" },
       { "id": "Fedora", "file": "06-headwear/Fedora.png", "weight": 5, "tier": "uncommon" },
