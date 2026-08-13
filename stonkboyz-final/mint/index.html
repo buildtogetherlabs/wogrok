@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STONKBOYZ — The Desk</title>
+<meta name="description" content="Stonkboyz. 2,222 lives. Not your daddy's broker. A based private trading desk on Robinhood Chain.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070807;
+  --panel:#101210;
+  --ink:#eef3e4;
+  --mute:#7d8674;
+  --line:#243023;
+  --lime:#c6ff2a;
+  --lime2:#8fd40f;
+  --red:#ff3a32;
+  --green:#2fde6a;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --display:"Anton",Impact,sans-serif;
+  --mark:"Permanent Marker",cursive;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{background:var(--bg);color:var(--ink)}
+body{
+  font-family:var(--mono);
+  line-height:1.45;
+  min-height:100%;
+  overflow-x:hidden;
+  background:
+    radial-gradient(900px 420px at 80% -10%,rgba(198,255,42,.08),transparent 60%),
+    radial-gradient(700px 400px at -10% 20%,rgba(255,58,50,.06),transparent 55%),
+    var(--bg);
+}
+body:after{
+  content:"";
+  pointer-events:none;
+  position:fixed;inset:0;z-index:80;
+  background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(0,0,0,.12) 3px 4px);
+  opacity:.35;
+}
+a{color:var(--lime);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
+
+/* TAPE */
+.tape-wrap{
+  height:34px;background:#050605;border-bottom:1px solid var(--line);
+  display:flex;align-items:center;overflow:hidden;
+  font:600 11px/1 var(--mono);letter-spacing:.04em;text-transform:uppercase;
+}
+.tape{display:flex;gap:28px;white-space:nowrap;animation:scroll 28s linear infinite;padding-left:16px}
+.tape b{color:var(--lime)}
+.tape .dn{color:var(--red)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+nav{
+  position:sticky;top:0;z-index:40;
+  background:rgba(7,8,7,.88);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.navin{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{
+  font-family:var(--mark);color:var(--lime);font-size:26px;letter-spacing:.01em;
+  text-shadow:0 0 18px rgba(198,255,42,.35);
+  transform:rotate(-2deg);
+}
+.navlinks{display:flex;gap:22px;font:600 11px var(--mono);text-transform:uppercase;color:var(--mute)}
+.navlinks a{color:var(--mute)}
+.navlinks a:hover{color:var(--lime);text-decoration:none}
+.btn{
+  appearance:none;border:1px solid var(--lime);background:transparent;color:var(--lime);
+  font:700 12px var(--mono);text-transform:uppercase;letter-spacing:.06em;
+  padding:10px 14px;cursor:pointer;
+}
+.btn:hover{background:var(--lime);color:#081000;text-decoration:none}
+.btn.solid{background:var(--lime);color:#081000;border-color:var(--lime)}
+.btn.solid:hover{box-shadow:0 0 0 3px rgba(198,255,42,.25)}
+.btn:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+.addr{font:600 11px var(--mono);color:var(--lime)}
+
+/* HERO DESK */
+.hero{padding:36px 0 20px}
+.desk{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:stretch;
+}
+@media(max-width:900px){.desk{grid-template-columns:1fr}.navlinks{display:none}}
+.cover{
+  position:relative;border:1px solid var(--line);background:#000;
+  min-height:460px;overflow:hidden;
+}
+.cover img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.1) contrast(1.05)}
+.cover .stamp{
+  position:absolute;left:14px;bottom:14px;
+  font:700 9px var(--mono);letter-spacing:.08em;border:1px solid #fff;padding:6px 7px;
+  background:#000;text-transform:uppercase;
+}
+.cover .tag{
+  position:absolute;right:14px;top:14px;
+  font-family:var(--mark);color:var(--lime);font-size:22px;transform:rotate(6deg);
+  text-shadow:0 2px 0 #000;
+}
+
+.console{
+  border:1px solid var(--lime);
+  background:linear-gradient(180deg,#121612,#0b0d0b);
+  box-shadow:0 0 0 1px #000,0 20px 60px rgba(0,0,0,.45),inset 0 1px 0 rgba(198,255,42,.12);
+  display:flex;flex-direction:column;
+}
+.console-bar{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:10px 14px;border-bottom:1px solid var(--line);
+  font:600 10px var(--mono);text-transform:uppercase;color:var(--mute);
+}
+.console-bar b{color:var(--lime)}
+.dots{display:flex;gap:6px}
+.dots i{width:8px;height:8px;border-radius:50%;background:#2a3228;display:block}
+.dots i:nth-child(1){background:var(--red)}
+.dots i:nth-child(2){background:#e6c200}
+.dots i:nth-child(3){background:var(--green)}
+.console-body{padding:22px 22px 20px;display:flex;flex-direction:column;gap:16px;flex:1}
+.kicker{font:600 11px var(--mono);color:var(--lime);letter-spacing:.14em;text-transform:uppercase}
+h1{
+  font-family:var(--display);font-weight:400;letter-spacing:-.01em;
+  font-size:clamp(42px,6.4vw,72px);line-height:.86;text-transform:uppercase;
+}
+h1 em{font-style:normal;color:var(--lime)}
+.lede{color:#c5ccba;font-size:14px;max-width:46ch}
+.stats{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:8px;
+}
+@media(max-width:600px){.stats{grid-template-columns:1fr 1fr}}
+.stat{border:1px solid var(--line);padding:10px}
+.stat label{display:block;font:600 9px var(--mono);color:var(--mute);text-transform:uppercase}
+.stat strong{display:block;margin-top:4px;font:700 16px var(--mono);color:var(--lime)}
+.mintrow{display:flex;gap:8px;align-items:stretch;flex-wrap:wrap}
+.qty{
+  display:flex;align-items:center;border:1px solid var(--line);background:#0a0c0a;
+}
+.qty button{
+  width:38px;height:42px;border:0;background:transparent;color:var(--lime);
+  font:700 18px var(--mono);cursor:pointer;
+}
+.qty input{
+  width:42px;text-align:center;background:transparent;border:0;color:var(--ink);
+  font:700 16px var(--mono);
+}
+.qty input:focus{outline:none}
+.mintrow .btn.solid{flex:1;min-width:160px}
+.hint{font:500 11px var(--mono);color:var(--mute)}
+.progress{height:6px;background:#1a1f18;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--lime);width:0}
+
+/* REVEAL */
+.reveal{
+  display:none;border-top:1px solid var(--line);padding:16px 22px 20px;
+  background:#0a0c0a;
+}
+.reveal.on{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center}
+.reveal img{width:120px;height:120px;object-fit:cover;border:1px solid var(--lime);background:#fff}
+.reveal h3{font-family:var(--display);font-size:28px;letter-spacing:.02em}
+.reveal ul{list-style:none;margin-top:6px;font:500 11px var(--mono);color:#c5ccba}
+.reveal li span{color:var(--mute)}
+
+/* BOOK + STRIP */
+.board{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:18px}
+@media(max-width:900px){.board{grid-template-columns:1fr}}
+.panel{border:1px solid var(--line);background:var(--panel)}
+.panel h2{
+  font-family:var(--display);font-size:28px;letter-spacing:.03em;text-transform:uppercase;
+  padding:14px 16px 0;
+}
+.panel .sub{padding:0 16px 12px;color:var(--mute);font-size:11px;text-transform:uppercase}
+.book{padding:0 8px 12px}
+.row,.head{
+  display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:8px;padding:7px 8px;
+  font:600 11px var(--mono);
+}
+.head{color:var(--mute);text-transform:uppercase;font-size:9px;border-bottom:1px solid var(--line)}
+.row.ask .px{color:var(--red)}
+.row.bid .px{color:var(--green)}
+.bar{height:5px;background:#1a1f18}
+.bar i{display:block;height:100%;background:var(--green)}
+.row.ask .bar i{background:var(--red)}
+.mid{text-align:center;color:var(--lime);font:700 10px var(--mono);padding:6px;letter-spacing:.1em}
+
+.live{padding:16px}
+.live .quote{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.q{border:1px solid var(--line);padding:12px}
+.q label{display:block;color:var(--mute);font-size:9px;text-transform:uppercase}
+.q b{display:block;font-size:22px;margin-top:4px}
+.q.up b{color:var(--green)} .q.dn b{color:var(--red)}
+.strip{
+  margin-top:18px;display:grid;grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--lime);background:#0b0e0b;
+}
+@media(max-width:700px){.strip{grid-template-columns:1fr 1fr}}
+.strip .cell{padding:16px;border-right:1px solid var(--line)}
+.strip .cell:last-child{border-right:0}
+.strip label{display:block;font:600 9px var(--mono);color:var(--mute);text-transform:uppercase}
+.strip strong{display:block;margin-top:4px;font:700 22px var(--mono);color:var(--lime)}
+
+/* SECTIONS */
+section{padding:72px 0 0}
+.sec-h{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:22px;border-bottom:1px solid var(--lime);padding-bottom:12px}
+.sec-h .k{color:var(--lime);font:600 11px var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.sec-h h2{font-family:var(--display);font-size:clamp(34px,5vw,56px);letter-spacing:.02em;text-transform:uppercase;line-height:.9}
+.sec-h p{max-width:36ch;color:var(--mute);font-size:13px}
+
+.wall{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+@media(max-width:800px){.wall{grid-template-columns:repeat(3,1fr)}}
+.wall figure{margin:0;background:#fff;border:1px solid #1c221c;cursor:pointer}
+.wall figure:hover{border-color:var(--lime);transform:rotate(-1deg)}
+.wall img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.wall figcaption{background:#0b0d0b;color:var(--mute);font:600 10px var(--mono);padding:6px 8px}
+
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:700px){.cards{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);padding:22px;min-height:180px;background:var(--panel)}
+.card.hot{background:var(--lime);color:#081000;border-color:var(--lime)}
+.card .n{font:700 11px var(--mono);color:var(--lime);margin-bottom:28px}
+.card.hot .n{color:#2a4300}
+.card h3{font-family:var(--display);font-size:32px;letter-spacing:.02em;text-transform:uppercase;margin-bottom:8px}
+.card p{color:#b7bead;font-size:13px}
+.card.hot p{color:#24360a}
+
+.flow{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--lime)}
+@media(max-width:800px){.flow{grid-template-columns:1fr 1fr}}
+.flow article{padding:20px;border-right:1px solid var(--line);min-height:190px}
+.flow article:last-child{border-right:0}
+.flow article:nth-child(3){background:var(--lime);color:#081000}
+.flow .n{font:700 11px var(--mono);color:var(--lime);margin-bottom:30px}
+.flow article:nth-child(3) .n{color:#2a4300}
+.flow h3{font-family:var(--display);font-size:26px;text-transform:uppercase;margin-bottom:8px}
+.flow p{font-size:12px;color:#b7bead}
+.flow article:nth-child(3) p{color:#24360a}
+
+.handbook{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px}
+@media(max-width:800px){.handbook{grid-template-columns:1fr}}
+.mani{
+  border:1px solid var(--lime);padding:26px;
+  background:#0b0e0b;
+}
+.mani h3{font-family:var(--display);font-size:40px;line-height:.9;text-transform:uppercase;margin:16px 0}
+.mani p{color:#b7bead;font-size:13px}
+.badge{margin-top:24px;border:1px dashed var(--lime);padding:10px;font:700 10px var(--mono);color:var(--lime);text-transform:uppercase}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px;font:700 14px var(--mono)}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--lime)}
+details[open] summary:after{content:"−"}
+details p{padding-top:8px;color:var(--mute);font-size:13px}
+
+.final{
+  margin-top:80px;padding:50px 0 30px;border-top:1px solid var(--lime);
+  display:flex;justify-content:space-between;gap:20px;align-items:end;flex-wrap:wrap;
+}
+.final h2{font-family:var(--display);font-size:clamp(48px,8vw,90px);line-height:.82;text-transform:uppercase}
+footer{
+  padding:18px 0 40px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  color:var(--mute);font:600 10px var(--mono);text-transform:uppercase;
+}
+.risk{color:#555c50;font:500 10px var(--mono);max-width:80ch;padding-bottom:12px}
+
+@media(max-width:600px){
+  .cover{min-height:320px}
+  h1{font-size:44px}
+}
+</style>
+</head>
+<body>
+<div class="tape-wrap"><div class="tape" id="tape"></div></div>
+
+<nav>
+  <div class="wrap navin">
+    <a class="logo" href="#">STONKBOYZ</a>
+    <div class="navlinks">
+      <a href="#mint">Mint</a>
+      <a href="#desk">The Desk</a>
+      <a href="#mechanics">Flywheel</a>
+      <a href="#rules">Rules</a>
+    </div>
+    <div>
+      <span class="addr" id="addr"></span>
+      <button class="btn" id="connectBtn" type="button">Connect</button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section class="hero" id="mint">
+    <div class="desk">
+      <div class="cover">
+        <img src="assets/album.jpg" alt="Stonkboyz — That's what we do">
+      </div>
+
+      <div class="console">
+        <div class="console-bar">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span>STONKBOYZ // PRIVATE DESK 01</span>
+          <b id="deskState">PRE-LAUNCH</b>
+        </div>
+        <div class="console-body">
+          <div class="kicker">Based private trading desk // Robinhood Chain</div>
+          <h1>NOT YOUR<br><em>DADDY'S</em><br>BROKER.</h1>
+          <p class="lede">
+            One tired face. 2,222 lives. Pull your Boy, put him on the desk,
+            and let the Hood print. This is a private trading desk — just not the one that asked for your W-2.
+          </p>
+          <div class="stats">
+            <div class="stat"><label>Supply</label><strong>2,222</strong></div>
+            <div class="stat"><label>Minted</label><strong id="minted">0</strong></div>
+            <div class="stat"><label>Price</label><strong id="price">TBA</strong></div>
+            <div class="stat"><label>Chain</label><strong>HOOD</strong></div>
+          </div>
+          <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+          <div class="mintrow">
+            <div class="qty">
+              <button type="button" id="minus">−</button>
+              <input id="qty" value="1" inputmode="numeric" aria-label="Quantity">
+              <button type="button" id="plus">+</button>
+            </div>
+            <button class="btn solid" id="mintBtn" type="button">PULL YOUR BOY</button>
+          </div>
+          <p class="hint" id="hint">Connect a wallet. Contracts are not live — this desk is wired for the drop.</p>
+        </div>
+        <div class="reveal" id="reveal">
+          <img id="revImg" alt="">
+          <div>
+            <div class="kicker">You pulled</div>
+            <h3 id="revName">—</h3>
+            <ul id="revTraits"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="board">
+      <div class="panel">
+        <h2>The book</h2>
+        <div class="sub">Simulated tape · $SBOYZ / BOYZ</div>
+        <div class="book" id="book"></div>
+      </div>
+      <div class="panel live">
+        <h2>Desk quote</h2>
+        <div class="sub">Not financial advice · obviously</div>
+        <div class="quote">
+          <div class="q up"><label>Best bid</label><b>$0.0842</b></div>
+          <div class="q dn"><label>Best ask</label><b>$0.0918</b></div>
+        </div>
+        <p class="hint">Spread 9%. That's not a bug, that's the neighborhood.</p>
+      </div>
+    </div>
+
+    <div class="strip">
+      <div class="cell"><label>Total Boyz</label><strong>2,222</strong></div>
+      <div class="cell"><label>Minted</label><strong id="minted2">0</strong></div>
+      <div class="cell"><label>$SBOYZ burned</label><strong>0</strong></div>
+      <div class="cell"><label>Fees to the desk</label><strong>0</strong></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-h">
+      <div>
+        <div class="k">01 // The lineup</div>
+        <h2>Same face.<br>Different bags.</h2>
+      </div>
+      <p>Every Boy is a life this guy already lived. Traits tell the story. The skull stays tired.</p>
+    </div>
+    <div class="wall" id="wall"></div>
+  </section>
+
+  <section id="desk">
+    <div class="sec-h">
+      <div>
+        <div class="k">02 // The desk</div>
+        <h2>Clock in.<br>Lock in.</h2>
+      </div>
+      <p>Forget the corporate dashboard. This is the desk where the Boyz work and the Hood keeps moving.</p>
+    </div>
+    <div class="cards">
+      <article class="card hot">
+        <div class="n">DESK NOTE // 001</div>
+        <h3>Pull your Boy.</h3>
+        <p>Mint one of 2,222 one-of-one Stonkboyz. Every Boy gets a seat and a place in the flywheel.</p>
+      </article>
+      <article class="card">
+        <div class="n">DESK NOTE // 002</div>
+        <h3>Put him to work.</h3>
+        <p>Stake your Boy with $SBOYZ. Staked Boyz leave the market and sit the fee pool.</p>
+      </article>
+      <article class="card">
+        <div class="n">DESK NOTE // 003</div>
+        <h3>Trade the Hood.</h3>
+        <p>Volume prints fees. Some buy back and burn $SBOYZ. Some pay the Boyz on the desk.</p>
+      </article>
+      <article class="card">
+        <div class="n">DESK NOTE // 004</div>
+        <h3>OGs get the call.</h3>
+        <p>Future drops and whatever we ship next — OG Boyz hear it first.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="mechanics">
+    <div class="sec-h">
+      <div>
+        <div class="k">03 // Mechanics</div>
+        <h2>The flywheel.</h2>
+      </div>
+      <p>No daily chores. No decay minigame. Boy → stake → tape → fees → Boyz.</p>
+    </div>
+    <div class="flow">
+      <article>
+        <div class="n">01 / PULL</div>
+        <h3>Pull</h3>
+        <p>Get one of 2,222 unique Stonkboyz and take your seat.</p>
+      </article>
+      <article>
+        <div class="n">02 / WORK</div>
+        <h3>Stake</h3>
+        <p>Stake Boy + $SBOYZ. Staked Boyz are off the market.</p>
+      </article>
+      <article>
+        <div class="n">03 / TAPE</div>
+        <h3>Print</h3>
+        <p>Every trade in the Hood pays a fee into the wheel.</p>
+      </article>
+      <article>
+        <div class="n">04 / PAYDAY</div>
+        <h3>Pay</h3>
+        <p>Burns $SBOYZ. Pays the desk. That's what we do.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="rules">
+    <div class="sec-h">
+      <div>
+        <div class="k">04 // House rules</div>
+        <h2>Read it once.</h2>
+      </div>
+      <p>Everything you actually need before you hit pull.</p>
+    </div>
+    <div class="handbook">
+      <div class="mani">
+        <div class="kicker">STONKBOYZ // PRIVATE DESK</div>
+        <h3>Work the desk.<br>Ignore the noise.</h3>
+        <p>Speculative digital collectible. The mechanics sit on trading activity, staking, and the Hood — not a promise of returns.</p>
+        <div class="badge">No financial advice // do your own research</div>
+      </div>
+      <div>
+        <details open>
+          <summary>What do I get when I pull a Boy?</summary>
+          <p>A 1-of-2,222 Stonkboyz NFT, a seat in the fee flywheel, and first call on whatever this desk ships next.</p>
+        </details>
+        <details>
+          <summary>What's $SBOYZ for?</summary>
+          <p>The token Boyz mint against and the asset staked Boyz earn. Part of trading fees buy it back and burn it. Part pays the desk.</p>
+        </details>
+        <details>
+          <summary>Is this guaranteed to go up?</summary>
+          <p>No. Nothing here guarantees returns. If someone tells you otherwise they work for your daddy's broker.</p>
+        </details>
+        <details>
+          <summary>When does the desk open?</summary>
+          <p>Contracts are still being wired. Follow <a href="https://x.com/StonkBoyz" target="_blank" rel="noopener">@StonkBoyz</a>.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <div class="final">
+    <h2>GET ON<br>THE DESK.</h2>
+    <div>
+      <p class="lede" style="margin-bottom:14px">2,222 Boyz. One tired face. The rest is tape.</p>
+      <a class="btn solid" href="#mint">Back to the pull</a>
+    </div>
+  </div>
+  <p class="risk">STONKBOYZ NFTs AND $SBOYZ ARE SPECULATIVE DIGITAL COLLECTIBLES, NOT INVESTMENT ADVICE. VERIFY CONTRACTS BEFORE YOU MINT.</p>
+  <footer>
+    <div>© 2026 STONKBOYZ // PRIVATE DESK</div>
+    <div>2,222 BOYZ // ROBINHOOD CHAIN</div>
+    <a href="https://x.com/StonkBoyz" target="_blank" rel="noopener">𝕏 @STONKBOYZ</a>
+  </footer>
+</main>
+
+<script>
+const CFG = {
+  supply: 2222,
+  minted: 0,
+  price: null,
+  contract: null,
+  maxQty: 5,
+};
+
+const ticks = [
+  ["$SBOYZ","▲ +4.21%","up"],
+  ["$HOOD","▲ +1.04%","up"],
+  ["$COPE","▼ -3.91%","dn"],
+  ["$YOLO","▲ +8.44%","up"],
+  ["$RUG","▼ -7.02%","dn"],
+  ["$PNL","▲ +12.0%","up"],
+  ["$NGMI","▼ -2.20%","dn"],
+  ["$WAGMI","▲ +5.12%","up"],
+];
+let tape = "";
+for (let i = 0; i < 2; i++) {
+  ticks.forEach(([n, c, k]) => {
+    tape += `<span>${n} <b class="${k==="dn"?"dn":""}">${c}</b></span>`;
+  });
+}
+document.getElementById("tape").innerHTML = tape;
+
+const bookRows = [
+  ["ask","$0.0918","4.2K",88],
+  ["ask","$0.0905","2.8K",61],
+  ["ask","$0.0897","1.7K",38],
+  ["bid","$0.0842","2.1K",45],
+  ["bid","$0.0828","3.6K",73],
+  ["bid","$0.0811","5.1K",96],
+];
+document.getElementById("book").innerHTML =
+  `<div class="head"><span>Price</span><span>Size</span><span>Depth</span></div>` +
+  bookRows.slice(0,3).map(r => `<div class="row ask"><span class="px">${r[1]}</span><span>${r[2]}</span><span><div class="bar"><i style="width:${r[3]}%"></i></div></span></div>`).join("") +
+  `<div class="mid">SPREAD 9.0%</div>` +
+  bookRows.slice(3).map(r => `<div class="row bid"><span class="px">${r[1]}</span><span>${r[2]}</span><span><div class="bar"><i style="width:${r[3]}%"></i></div></span></div>`).join("");
+
+let boyz = [];
+let account = null;
+let qty = 1;
+
+function setQty(n){
+  qty = Math.max(1, Math.min(CFG.maxQty, n|0));
+  document.getElementById("qty").value = qty;
+}
+document.getElementById("minus").onclick = () => setQty(qty-1);
+document.getElementById("plus").onclick = () => setQty(qty+1);
+document.getElementById("qty").onchange = e => setQty(e.target.value);
+
+function short(a){ return a.slice(0,6)+"…"+a.slice(-4); }
+
+async function connect(){
+  const btn = document.getElementById("connectBtn");
+  if (window.ethereum) {
+    try {
+      const accs = await window.ethereum.request({ method: "eth_requestAccounts" });
+      account = accs[0];
+    } catch (e) {
+      document.getElementById("hint").textContent = "Wallet rejected. Try again.";
+      return;
+    }
+  } else {
+    account = "0xDESK"+Math.random().toString(16).slice(2,10);
+    document.getElementById("hint").textContent = "No wallet found — desk session is local until contracts go live.";
+  }
+  document.getElementById("addr").textContent = short(account);
+  btn.textContent = "Connected";
+  btn.disabled = true;
+}
+
+document.getElementById("connectBtn").onclick = connect;
+
+function renderWall(){
+  document.getElementById("wall").innerHTML = boyz.map(b => `
+    <figure data-id="${b.id}">
+      <img src="${b.file}" alt="Stonkboyz #${b.id}" width="320" height="320">
+      <figcaption>#${b.id} · ${b.attrs.Tier}</figcaption>
+    </figure>
+  `).join("");
+}
+
+function showReveal(b){
+  const box = document.getElementById("reveal");
+  document.getElementById("revImg").src = b.file;
+  document.getElementById("revName").textContent = "STONKBOYZ #"+b.id;
+  document.getElementById("revTraits").innerHTML =
+    ["Clothes","Eyes","Mouth","Headwear","Nose"].map(k =>
+      `<li><span>${k}</span> ${b.attrs[k]||"—"}</li>`
+    ).join("");
+  box.classList.add("on");
+}
+
+document.getElementById("mintBtn").onclick = async () => {
+  if (!account) { await connect(); if (!account) return; }
+  const btn = document.getElementById("mintBtn");
+  btn.disabled = true;
+  btn.textContent = "PULLING…";
+  await new Promise(r => setTimeout(r, 700));
+  if (CFG.contract) {
+    document.getElementById("hint").textContent = "Contract mint not wired yet.";
+  } else {
+    const pick = boyz[Math.floor(Math.random()*boyz.length)];
+    CFG.minted = Math.min(CFG.supply, CFG.minted + qty);
+    document.getElementById("minted").textContent = CFG.minted;
+    document.getElementById("minted2").textContent = CFG.minted;
+    document.getElementById("bar").style.width = (100*CFG.minted/CFG.supply)+"%";
+    showReveal(pick);
+    document.getElementById("hint").textContent = "Preview pull — live mints start when the contract is posted.";
+    document.getElementById("deskState").textContent = "DESK HOT";
+  }
+  btn.disabled = false;
+  btn.textContent = "PULL YOUR BOY";
+};
+
+fetch("boyz.json").then(r => r.json()).then(data => {
+  boyz = data;
+  renderWall();
+}).catch(() => {
+  document.getElementById("hint").textContent = "Could not load boyz.json — serve this folder over http.";
+});
+</script>
+</body>
+</html>

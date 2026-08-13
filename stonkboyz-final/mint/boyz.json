@@ -1,0 +1,170 @@
+[
+  {
+    "id": 5,
+    "file": "assets/boyz/0005.jpg",
+    "attrs": {
+      "Background": "PNL Standard",
+      "Clothes": "Bathrobe",
+      "Nose": "Standard",
+      "Mouth": "Pipe",
+      "Eyes": "Aviator",
+      "Headwear": "None",
+      "Tier": "Rare"
+    },
+    "score": 82.62381
+  },
+  {
+    "id": 21,
+    "file": "assets/boyz/0021.jpg",
+    "attrs": {
+      "Background": "PNL Green",
+      "Clothes": "Track Suit",
+      "Nose": "Standard",
+      "Mouth": "Standard Deviation",
+      "Eyes": "Laser Eyez",
+      "Headwear": "Baseball Cap White",
+      "Tier": "Epic"
+    },
+    "score": 99.05
+  },
+  {
+    "id": 22,
+    "file": "assets/boyz/0022.jpg",
+    "attrs": {
+      "Background": "PNL Standard",
+      "Clothes": "Crypto Hoodie",
+      "Nose": "Standard",
+      "Mouth": "Green Gainz",
+      "Eyes": "Blood Shot",
+      "Headwear": "None",
+      "Tier": "Rare"
+    },
+    "score": 66.29881
+  },
+  {
+    "id": 30,
+    "file": "assets/boyz/0030.jpg",
+    "attrs": {
+      "Background": "PNL Green",
+      "Clothes": "Degen Hoodie",
+      "Nose": "Standard",
+      "Mouth": "Pipe",
+      "Eyes": "Impressed",
+      "Headwear": "Bucket Hat",
+      "Tier": "Rare"
+    },
+    "score": 87.544643
+  },
+  {
+    "id": 31,
+    "file": "assets/boyz/0031.jpg",
+    "attrs": {
+      "Background": "PNL Red",
+      "Clothes": "Cowboy",
+      "Nose": "Standard",
+      "Mouth": "Stitches",
+      "Eyes": "Alien",
+      "Headwear": "Devil",
+      "Tier": "Rare"
+    },
+    "score": 93.266667
+  },
+  {
+    "id": 39,
+    "file": "assets/boyz/0039.jpg",
+    "attrs": {
+      "Background": "PNL Standard",
+      "Clothes": "Dad Shirt",
+      "Nose": "Standard",
+      "Mouth": "Total Loss",
+      "Eyes": "No Cry",
+      "Headwear": "Bucket Hat",
+      "Tier": "Rare"
+    },
+    "score": 86.142857
+  },
+  {
+    "id": 63,
+    "file": "assets/boyz/0063.jpg",
+    "attrs": {
+      "Background": "PNL Green",
+      "Clothes": "Jersey",
+      "Nose": "Standard",
+      "Mouth": "Standard Deviation",
+      "Eyes": "Impressed",
+      "Headwear": "Crown",
+      "Tier": "Epic"
+    },
+    "score": 97.7375
+  },
+  {
+    "id": 65,
+    "file": "assets/boyz/0065.jpg",
+    "attrs": {
+      "Background": "PNL Standard",
+      "Clothes": "Knight",
+      "Nose": "Standard",
+      "Mouth": "Standard Deviation",
+      "Eyes": "Blacked Out",
+      "Headwear": "None",
+      "Tier": "Epic"
+    },
+    "score": 117.491667
+  },
+  {
+    "id": 95,
+    "file": "assets/boyz/0095.jpg",
+    "attrs": {
+      "Background": "PNL Green",
+      "Clothes": "Stonks Shirt",
+      "Nose": "Standard",
+      "Mouth": "Toothpick",
+      "Eyes": "X Eyez",
+      "Headwear": "Taco Trade",
+      "Tier": "Legendary"
+    },
+    "score": 170.231746
+  },
+  {
+    "id": 98,
+    "file": "assets/boyz/0098.jpg",
+    "attrs": {
+      "Background": "PNL Standard",
+      "Clothes": "Stonks Shirt",
+      "Nose": "Alien",
+      "Mouth": "Standard Deviation",
+      "Eyes": "Impressed",
+      "Headwear": "NGMI Cap",
+      "Tier": "Legendary"
+    },
+    "score": 155.172024
+  },
+  {
+    "id": 123,
+    "file": "assets/boyz/0123.jpg",
+    "attrs": {
+      "Background": "PNL Green",
+      "Clothes": "Cult Robe",
+      "Nose": "Standard",
+      "Mouth": "Standard Deviation",
+      "Eyes": "X Eyez",
+      "Headwear": "Baseball Cap Green",
+      "Tier": "Legendary"
+    },
+    "score": 210.625
+  },
+  {
+    "id": 129,
+    "file": "assets/boyz/0129.jpg",
+    "attrs": {
+      "Background": "PNL Green",
+      "Clothes": "King",
+      "Nose": "Standard",
+      "Mouth": "Standard Deviation",
+      "Eyes": "Aviator",
+      "Headwear": "Stonks General",
+      "Tier": "Epic"
+    },
+    "score": 174.125
+  }
+]
