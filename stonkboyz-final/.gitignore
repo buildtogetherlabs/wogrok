@@ -1,4 +1,5 @@
 output/images/
 output/metadata/
+collection/images/
 __pycache__/
 .DS_Store
