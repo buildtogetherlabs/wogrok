@@ -28,9 +28,9 @@
       "reason": "Cowboy already has a neckerchief."
     },
     {
-      "id": "beanie_eyewear",
-      "when": { "headwear": "Beanie", "eyes": ["Pixel Glasses", "Aviator", "3D Glasses", "VR", "Monocle"] },
-      "reason": "Beanie clips glasses temples."
+      "id": "beanie_no_eyes",
+      "when": { "headwear": "Beanie", "eyes": ["Unimpressed", "Impressed", "Alien", "Blood Shot", "Red Eyez", "Love", "No Cry", "Sniper", "X Eyez", "Eye Patch", "Aviator", "Blacked Out", "Pixel Glasses", "3D Glasses", "Monocle", "VR", "Laser Eyez"] },
+      "reason": "Stocking cap covers the eyes. Beanie is locked to Eyes = None."
     },
     {
       "id": "cowboy_eyewear",
@@ -99,6 +99,7 @@
       { "id": "Bandana", "file": "04-mouth/Bandana.png", "weight": 3, "tier": "rare" }
     ],
     "eyes": [
+      { "id": "None", "file": null, "weight": 0, "tier": "uncommon" },
       { "id": "Unimpressed", "file": "05-eyes/Unimpressed.png", "weight": 22, "tier": "common" },
       { "id": "Impressed", "file": "05-eyes/Impressed.png", "weight": 16, "tier": "common" },
       { "id": "Alien", "file": "05-eyes/Alien.png", "weight": 10, "tier": "uncommon" },

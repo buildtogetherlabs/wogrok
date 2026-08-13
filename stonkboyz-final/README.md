@@ -44,7 +44,7 @@ Regenerate:
 
 - Mouth `Bandana` × Headwear `Bandana`
 - Clothes `Cowboy` × Mouth `Bandana`
-- Beanie × Pixel Glasses / Aviator / 3D Glasses / VR / Monocle
+- Beanie (stocking cap) × **any eyes** — Eyes is forced to `None`
 - Cowboy Hat / Bucket Hat / Military Degen × Pixel Glasses / Aviator / 3D Glasses / VR
 
 Bandage mouth is **out**. File stays in `layers/04-mouth/` but is not minted.
@@ -69,7 +69,7 @@ Common shirts (Dad / Stonks / All In / Jacket / Business Suit) are ~8% each.
 
 - Head file is a blank oval. Canonical wojak hook nose is `layers/03-head/Nose.png`.
 - `Green Gainz .png` was 0 bytes and was dropped. Display name is **Green Gainz** (`04-mouth/Green Gainz_.png`).
-- Beanie is a slouch cut — it covers the eye line. Glasses are not allowed with it.
+- Beanie / stocking cap is locked to **no eyes**. The 116 beanie tokens were re-rendered in place.
 - No headphones layer, so the exact album-cover look cannot mint. Closest is Crypto Hoodie + Toothpick + Unimpressed + None.
 
 ## Status

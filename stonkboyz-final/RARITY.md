@@ -2,14 +2,14 @@
 
 - Supply: **2222**
 - Seed: `22220812`
-- Duplicate DNA retries (unique-combo enforcement): 194
+- Duplicate DNA retries (unique-combo enforcement): 0
 - Unique DNA: 2222
 - Conflict-rule violations in the final set: 0
 
 Conflicts locked:
 - `double_bandana`: mouth=Bandana, headwear=Bandana — Two bandanas on the same face.
 - `cowboy_neckerchief`: clothes=Cowboy, mouth=Bandana — Cowboy already has a neckerchief.
-- `beanie_eyewear`: headwear=Beanie, eyes=['Pixel Glasses', 'Aviator', '3D Glasses', 'VR', 'Monocle'] — Beanie clips glasses temples.
+- `beanie_no_eyes`: headwear=Beanie, eyes=['Unimpressed', 'Impressed', 'Alien', 'Blood Shot', 'Red Eyez', 'Love', 'No Cry', 'Sniper', 'X Eyez', 'Eye Patch', 'Aviator', 'Blacked Out', 'Pixel Glasses', '3D Glasses', 'Monocle', 'VR', 'Laser Eyez'] — Stocking cap covers the eyes. Beanie is locked to Eyes = None.
 - `cowboy_eyewear`: headwear=Cowboy Hat, eyes=['Pixel Glasses', 'Aviator', '3D Glasses', 'VR'] — Cowboy hat brim cuts through sunglasses.
 - `bucket_eyewear`: headwear=Bucket Hat, eyes=['Pixel Glasses', 'Aviator', '3D Glasses', 'VR'] — Bucket brim cuts through sunglasses.
 - `military_eyewear`: headwear=Military Degen, eyes=['Pixel Glasses', 'Aviator', '3D Glasses', 'VR'] — Helmet brim cuts through sunglasses.
@@ -20,9 +20,9 @@ None headwear is a real trait (no pixels).
 
 | Trait | Tier | Weight | Expected | Actual | Δ |
 |---|---|---:|---:|---:|---:|
-| PNL Standard | common | 60 | 1333.2 (60.0%) | 1313 (59.1%) | -20.2 |
-| PNL Green | uncommon | 25 | 555.5 (25.0%) | 559 (25.2%) | +3.5 |
-| PNL Red | rare | 15 | 333.3 (15.0%) | 350 (15.8%) | +16.7 |
+| PNL Standard | common | 60 | 1333.2 (60.0%) | 1298 (58.4%) | -35.2 |
+| PNL Green | uncommon | 25 | 555.5 (25.0%) | 569 (25.6%) | +13.5 |
+| PNL Red | rare | 15 | 333.3 (15.0%) | 355 (16.0%) | +21.7 |
 
 ## Clothes
 
@@ -64,11 +64,11 @@ None headwear is a real trait (no pixels).
 
 | Trait | Tier | Weight | Expected | Actual | Δ |
 |---|---|---:|---:|---:|---:|
-| Standard Deviation | common | 40 | 916.3 (41.2%) | 873 (39.3%) | -43.3 |
-| Toothpick | common | 18 | 412.3 (18.6%) | 420 (18.9%) | +7.7 |
-| Piercing | common | 14 | 320.7 (14.4%) | 323 (14.5%) | +2.3 |
-| Stitches | uncommon | 8 | 183.3 (8.2%) | 177 (8.0%) | -6.3 |
-| Pipe | uncommon | 7 | 160.4 (7.2%) | 183 (8.2%) | +22.6 |
+| Standard Deviation | common | 40 | 916.3 (41.2%) | 871 (39.2%) | -45.3 |
+| Toothpick | common | 18 | 412.3 (18.6%) | 419 (18.9%) | +6.7 |
+| Piercing | common | 14 | 320.7 (14.4%) | 324 (14.6%) | +3.3 |
+| Stitches | uncommon | 8 | 183.3 (8.2%) | 178 (8.0%) | -5.3 |
+| Pipe | uncommon | 7 | 160.4 (7.2%) | 184 (8.3%) | +23.6 |
 | Green Gainz | rare | 4 | 91.6 (4.1%) | 102 (4.6%) | +10.4 |
 | Total Loss | rare | 3 | 68.7 (3.1%) | 78 (3.5%) | +9.3 |
 | Bandana | rare | 3 | 68.7 (3.1%) | 66 (3.0%) | -2.7 |
@@ -77,18 +77,19 @@ None headwear is a real trait (no pixels).
 
 | Trait | Tier | Weight | Expected | Actual | Δ |
 |---|---|---:|---:|---:|---:|
-| Unimpressed | common | 22 | 440.4 (19.8%) | 436 (19.6%) | -4.4 |
-| Impressed | common | 16 | 320.3 (14.4%) | 324 (14.6%) | +3.7 |
-| Alien | uncommon | 10 | 200.2 (9.0%) | 221 (9.9%) | +20.8 |
-| Blood Shot | uncommon | 7 | 140.1 (6.3%) | 138 (6.2%) | -2.1 |
-| Red Eyez | uncommon | 6 | 120.1 (5.4%) | 135 (6.1%) | +14.9 |
-| Love | uncommon | 6 | 120.1 (5.4%) | 125 (5.6%) | +4.9 |
-| No Cry | uncommon | 6 | 120.1 (5.4%) | 131 (5.9%) | +10.9 |
-| Sniper | uncommon | 5 | 100.1 (4.5%) | 93 (4.2%) | -7.1 |
-| X Eyez | uncommon | 5 | 100.1 (4.5%) | 98 (4.4%) | -2.1 |
-| Eye Patch | uncommon | 5 | 100.1 (4.5%) | 96 (4.3%) | -4.1 |
+| None | uncommon | 0 | 0.0 (0.0%) | 116 (5.2%) | +116.0 |
+| Unimpressed | common | 22 | 440.4 (19.8%) | 412 (18.5%) | -28.4 |
+| Impressed | common | 16 | 320.3 (14.4%) | 302 (13.6%) | -18.3 |
+| Alien | uncommon | 10 | 200.2 (9.0%) | 205 (9.2%) | +4.8 |
+| Blood Shot | uncommon | 7 | 140.1 (6.3%) | 130 (5.9%) | -10.1 |
+| Red Eyez | uncommon | 6 | 120.1 (5.4%) | 125 (5.6%) | +4.9 |
+| Love | uncommon | 6 | 120.1 (5.4%) | 114 (5.1%) | -6.1 |
+| No Cry | uncommon | 6 | 120.1 (5.4%) | 124 (5.6%) | +3.9 |
+| Sniper | uncommon | 5 | 100.1 (4.5%) | 90 (4.1%) | -10.1 |
+| X Eyez | uncommon | 5 | 100.1 (4.5%) | 93 (4.2%) | -7.1 |
+| Eye Patch | uncommon | 5 | 100.1 (4.5%) | 93 (4.2%) | -7.1 |
 | Aviator | uncommon | 5 | 100.1 (4.5%) | 87 (3.9%) | -13.1 |
-| Blacked Out | rare | 4 | 80.1 (3.6%) | 85 (3.8%) | +4.9 |
+| Blacked Out | rare | 4 | 80.1 (3.6%) | 78 (3.5%) | -2.1 |
 | Pixel Glasses | rare | 4 | 80.1 (3.6%) | 71 (3.2%) | -9.1 |
 | 3D Glasses | rare | 3 | 60.1 (2.7%) | 42 (1.9%) | -18.1 |
 | Monocle | rare | 3 | 60.1 (2.7%) | 66 (3.0%) | +5.9 |
@@ -125,12 +126,12 @@ None headwear is a real trait (no pixels).
 
 - **Stonkboyz #1728** score 261.8 — Background: PNL Standard, Clothes: Cult Robe, Nose: Standard, Mouth: Toothpick, Eyes: Blacked Out, Headwear: Fanboy
 - **Stonkboyz #1104** score 247.2 — Background: PNL Red, Clothes: Cult Robe, Nose: Standard, Mouth: Standard Deviation, Eyes: Alien, Headwear: Fanboy
+- **Stonkboyz #1422** score 232.9 — Background: PNL Red, Clothes: Cult Robe, Nose: Standard, Mouth: Green Gainz, Eyes: None, Headwear: Beanie
+- **Stonkboyz #1481** score 229.6 — Background: PNL Red, Clothes: Tuxedo, Nose: Alien, Mouth: Standard Deviation, Eyes: None, Headwear: Beanie
 - **Stonkboyz #1324** score 228.4 — Background: PNL Standard, Clothes: Track Suit, Nose: Alien, Mouth: Toothpick, Eyes: Monocle, Headwear: Let Him Cook
-- **Stonkboyz #1481** score 228.1 — Background: PNL Red, Clothes: Tuxedo, Nose: Alien, Mouth: Standard Deviation, Eyes: Love, Headwear: Beanie
 - **Stonkboyz #690** score 227.9 — Background: PNL Green, Clothes: Cult Robe, Nose: Standard, Mouth: Piercing, Eyes: Pixel Glasses, Headwear: Bandana
 - **Stonkboyz #732** score 226.7 — Background: PNL Standard, Clothes: King, Nose: Alien, Mouth: Standard Deviation, Eyes: Monocle, Headwear: None
 - **Stonkboyz #717** score 224.3 — Background: PNL Green, Clothes: Tuxedo, Nose: Alien, Mouth: Piercing, Eyes: Blacked Out, Headwear: None
-- **Stonkboyz #1422** score 224.0 — Background: PNL Red, Clothes: Cult Robe, Nose: Standard, Mouth: Green Gainz, Eyes: Alien, Headwear: Beanie
 - **Stonkboyz #773** score 221.5 — Background: PNL Standard, Clothes: Cult Robe, Nose: Standard, Mouth: Piercing, Eyes: Impressed, Headwear: Devil
 - **Stonkboyz #364** score 219.5 — Background: PNL Standard, Clothes: King, Nose: Standard, Mouth: Standard Deviation, Eyes: Impressed, Headwear: Taco Trade
 
