@@ -78,8 +78,8 @@ def sample_token(cfg: dict, rng: random.Random) -> dict[str, dict]:
     rules = cfg["conflicts"]
     nose_standard = next(t for t in layers["nose"] if t["id"] == "Standard")
     head_standard = next(t for t in layers["head"] if t["id"] == "Standard")
-    eyes_none = next(t for t in layers["eyes"] if t["id"] == "None")
-    eyes_pool = [t for t in layers["eyes"] if t["id"] != "None"]
+    eyes_standard = next(t for t in layers["eyes"] if t["id"] == "Standard")
+    eyes_pool = [t for t in layers["eyes"] if t.get("file")]
     for _ in range(200):
         hat = pick(layers["headwear"], rng)
         picked = {
@@ -88,7 +88,7 @@ def sample_token(cfg: dict, rng: random.Random) -> dict[str, dict]:
             "head": head_standard,
             "nose": nose_standard,
             "mouth": pick(layers["mouth"], rng),
-            "eyes": eyes_none if hat["id"] == "Beanie" else pick(eyes_pool, rng),
+            "eyes": eyes_standard if hat["id"] == "Beanie" else pick(eyes_pool, rng),
             "headwear": hat,
         }
         if conflicts_with(picked, rules) is None:
@@ -186,7 +186,7 @@ def rarity_score(picked: dict[str, dict], cfg: dict) -> float:
         t = picked[layer]
         if layer == "nose" and t["id"] == "Alien":
             p = float(cfg.get("alien_nose_count", 1)) / supply
-        elif t["id"] == "None" and float(t.get("weight", 0)) == 0:
+        elif t["id"] in {"None", "Standard"} and float(t.get("weight", 0)) == 0:
             p = max(1.0 / supply, 0.05)
         else:
             total_w = sum(float(x["weight"]) for x in traits) or 1.0

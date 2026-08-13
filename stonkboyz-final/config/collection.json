@@ -3,7 +3,7 @@
   "symbol": "STONK",
   "description": "One tired Stonkboy. 2,222 lives. Traits tell the story.",
   "supply": 2222,
-  "seed": 22220813,
+  "seed": 22220814,
   "alien_nose_count": 22,
   "width": 1000,
   "height": 1000,
@@ -13,8 +13,8 @@
     "head",
     "nose",
     "mouth",
-    "eyes",
-    "headwear"
+    "headwear",
+    "eyes"
   ],
   "conflicts": [
     {
@@ -28,25 +28,27 @@
       "reason": "Cowboy already has a neckerchief."
     },
     {
-      "id": "beanie_no_eyes",
-      "when": { "headwear": "Beanie", "eyes": ["Unimpressed", "Impressed", "Alien", "Blood Shot", "Red Eyez", "Love", "No Cry", "Sniper", "X Eyez", "Eye Patch", "Aviator", "Blacked Out", "Pixel Glasses", "3D Glasses", "Monocle", "VR", "Laser Eyez"] },
-      "reason": "Stocking cap covers the eyes. Beanie is locked to Eyes = None."
+      "id": "beanie_no_drawn_eyes",
+      "when": { "headwear": "Beanie", "eyes": ["Unimpressed", "Impressed", "Alien", "Blood Shot", "Red Eyez", "Love", "No Cry", "Sniper", "X Eyez", "Eye Patch", "Aviator", "Blacked Out", "Pixel Glasses", "3D Glasses", "Monocle", "VR", "Laser Eyez", "Energy"] },
+      "reason": "Beanie covers the sockets. No eye pixels; metadata stays Standard."
     },
-    {
-      "id": "cowboy_eyewear",
-      "when": { "headwear": "Cowboy Hat", "eyes": ["Pixel Glasses", "Aviator", "3D Glasses", "VR"] },
-      "reason": "Cowboy hat brim cuts through sunglasses."
-    },
-    {
-      "id": "bucket_eyewear",
-      "when": { "headwear": "Bucket Hat", "eyes": ["Pixel Glasses", "Aviator", "3D Glasses", "VR"] },
-      "reason": "Bucket brim cuts through sunglasses."
-    },
-    {
-      "id": "military_eyewear",
-      "when": { "headwear": "Military Degen", "eyes": ["Pixel Glasses", "Aviator", "3D Glasses", "VR"] },
-      "reason": "Helmet brim cuts through sunglasses."
-    }
+    { "id": "hat_bandana", "when": { "headwear": "Bandana", "eyes": ["Eye Patch", "3D Glasses"] }, "reason": "Bandana clashes with these eyes." },
+    { "id": "hat_cap_white", "when": { "headwear": "Baseball Cap White", "eyes": ["Blacked Out", "VR", "Eye Patch"] }, "reason": "White cap clashes with these eyes." },
+    { "id": "hat_cap_green", "when": { "headwear": "Baseball Cap Green", "eyes": ["Blacked Out", "VR", "Eye Patch"] }, "reason": "Green cap clashes with these eyes." },
+    { "id": "hat_bucket", "when": { "headwear": "Bucket Hat", "eyes": ["Blacked Out", "VR", "Eye Patch", "Pixel Glasses"] }, "reason": "Bucket hat clashes with these eyes." },
+    { "id": "hat_cook", "when": { "headwear": "Let Him Cook", "eyes": ["Blacked Out", "Eye Patch"] }, "reason": "Chef hat clashes with these eyes." },
+    { "id": "hat_cowboy", "when": { "headwear": "Cowboy Hat", "eyes": ["Blacked Out", "VR", "Eye Patch", "Monocle"] }, "reason": "Cowboy hat clashes with these eyes." },
+    { "id": "hat_band_white", "when": { "headwear": "Headband White", "eyes": ["Eye Patch", "Aviator", "3D Glasses"] }, "reason": "White headband clashes with these eyes." },
+    { "id": "hat_band_green", "when": { "headwear": "Headband Green", "eyes": ["Eye Patch", "Aviator", "3D Glasses"] }, "reason": "Green headband clashes with these eyes." },
+    { "id": "hat_fedora", "when": { "headwear": "Fedora", "eyes": ["Eye Patch", "VR"] }, "reason": "Fedora clashes with these eyes." },
+    { "id": "hat_lil", "when": { "headwear": "Lil Trader", "eyes": ["Blacked Out", "Eye Patch", "3D Glasses"] }, "reason": "Lil Trader clashes with these eyes." },
+    { "id": "hat_taco", "when": { "headwear": "Taco Trade", "eyes": ["Blacked Out", "Eye Patch", "Aviator", "Pixel Glasses"] }, "reason": "Taco Trade clashes with these eyes." },
+    { "id": "hat_viking", "when": { "headwear": "Viking Hodl", "eyes": ["Blacked Out", "Eye Patch", "3D Glasses"] }, "reason": "Viking Hodl clashes with these eyes." },
+    { "id": "hat_general", "when": { "headwear": "Stonks General", "eyes": ["Blacked Out", "Eye Patch"] }, "reason": "Stonks General clashes with these eyes." },
+    { "id": "hat_ngmi", "when": { "headwear": "NGMI Cap", "eyes": ["Blacked Out", "VR", "Eye Patch"] }, "reason": "NGMI cap clashes with these eyes." },
+    { "id": "hat_military", "when": { "headwear": "Military Degen", "eyes": ["Blacked Out", "VR", "Eye Patch", "Monocle", "Aviator", "3D Glasses", "Pixel Glasses"] }, "reason": "Military Degen clashes with these eyes." },
+    { "id": "hat_santa", "when": { "headwear": "Santa", "eyes": ["Blacked Out", "Eye Patch", "3D Glasses", "Pixel Glasses"] }, "reason": "Santa clashes with these eyes." },
+    { "id": "energy_eyewear", "when": { "eyes": "Energy", "headwear": ["Beanie"] }, "reason": "Energy is an eye layer; beanie already has no drawn eyes." }
   ],
   "rarity_notes": "Weights are relative inside each layer. Probability = weight / sum(layer). None headwear is first-class so the album-cover bald look can mint.",
   "layers": {
@@ -100,7 +102,7 @@
       { "id": "Bandana", "file": "04-mouth/Bandana.png", "weight": 3, "tier": "rare" }
     ],
     "eyes": [
-      { "id": "None", "file": null, "weight": 0, "tier": "uncommon" },
+      { "id": "Standard", "file": null, "weight": 0, "tier": "common" },
       { "id": "Unimpressed", "file": "05-eyes/Unimpressed.png", "weight": 22, "tier": "common" },
       { "id": "Impressed", "file": "05-eyes/Impressed.png", "weight": 16, "tier": "common" },
       { "id": "Alien", "file": "05-eyes/Alien.png", "weight": 10, "tier": "uncommon" },
@@ -116,6 +118,7 @@
       { "id": "Pixel Glasses", "file": "05-eyes/Pixel Glasses.png", "weight": 4, "tier": "rare" },
       { "id": "3D Glasses", "file": "05-eyes/3D Glasses.png", "weight": 3, "tier": "rare" },
       { "id": "Monocle", "file": "05-eyes/Monocle.png", "weight": 3, "tier": "rare" },
+      { "id": "Energy", "file": "05-eyes/Energy.png", "weight": 3, "tier": "rare" },
       { "id": "VR", "file": "05-eyes/VR.png", "weight": 2, "tier": "epic" },
       { "id": "Laser Eyez", "file": "05-eyes/Laser Eyez.png", "weight": 2, "tier": "epic" }
     ],
