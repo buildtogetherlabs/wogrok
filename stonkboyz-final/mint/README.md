@@ -2,6 +2,8 @@
 
 Based private trading desk. Not the beige broker site.
 
+**Team preview:** https://buildtogetherlabs.github.io/stonkboyz/mint/
+
 ```
 cd stonkboyz-final/mint
 python3 -m http.server 8787
