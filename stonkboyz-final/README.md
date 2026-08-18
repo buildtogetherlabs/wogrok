@@ -90,6 +90,6 @@ Common shirts (Dad / Stonks / All In / Jacket / Business Suit) are ~8% each.
 - [x] Bandage removed
 - [x] Hat / glasses conflicts locked
 - [x] 2,222 generate + metadata
-- [x] Mint desk frontend (`mint/`) — preview pull until contract
+- [x] Desk landing (`mint/`) — OpenSea drop page; price / date TBA
+- [ ] OpenSea collection / drop URL (`CFG.opensea`)
 - [ ] IPFS / reveal URI
-- [ ] On-chain mint

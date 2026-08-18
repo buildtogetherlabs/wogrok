@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>STONKBOYZ — The Desk</title>
-<meta name="description" content="Stonkboyz. 2,222 lives. Not your daddy's broker. A based private trading desk on Robinhood Chain.">
+<meta name="description" content="Stonkboyz. 2,222 lives. Minting on OpenSea. Price TBA. Date TBA. Not your daddy's broker.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
 <style>
@@ -75,12 +75,14 @@ nav{
   appearance:none;border:1px solid var(--lime);background:transparent;color:var(--lime);
   font:700 12px var(--mono);text-transform:uppercase;letter-spacing:.06em;
   padding:10px 14px;cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;
 }
 .btn:hover{background:var(--lime);color:#081000;text-decoration:none}
 .btn.solid{background:var(--lime);color:#081000;border-color:var(--lime)}
 .btn.solid:hover{box-shadow:0 0 0 3px rgba(198,255,42,.25)}
-.btn:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
-.addr{font:600 11px var(--mono);color:var(--lime)}
+.btn:disabled,.btn.is-off{
+  opacity:.45;cursor:not-allowed;box-shadow:none;pointer-events:none;
+}
 
 /* HERO DESK */
 .hero{padding:36px 0 20px}
@@ -145,33 +147,8 @@ h1 em{font-style:normal;color:var(--lime)}
 .stat label{display:block;font:600 9px var(--mono);color:var(--mute);text-transform:uppercase}
 .stat strong{display:block;margin-top:4px;font:700 16px var(--mono);color:var(--lime)}
 .mintrow{display:flex;gap:8px;align-items:stretch;flex-wrap:wrap}
-.qty{
-  display:flex;align-items:center;border:1px solid var(--line);background:#0a0c0a;
-}
-.qty button{
-  width:38px;height:42px;border:0;background:transparent;color:var(--lime);
-  font:700 18px var(--mono);cursor:pointer;
-}
-.qty input{
-  width:42px;text-align:center;background:transparent;border:0;color:var(--ink);
-  font:700 16px var(--mono);
-}
-.qty input:focus{outline:none}
-.mintrow .btn.solid{flex:1;min-width:160px}
+.mintrow .btn.solid{flex:1;min-width:180px;min-height:44px}
 .hint{font:500 11px var(--mono);color:var(--mute)}
-.progress{height:6px;background:#1a1f18;overflow:hidden}
-.progress i{display:block;height:100%;background:var(--lime);width:0}
-
-/* REVEAL */
-.reveal{
-  display:none;border-top:1px solid var(--line);padding:16px 22px 20px;
-  background:#0a0c0a;
-}
-.reveal.on{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center}
-.reveal img{width:120px;height:120px;object-fit:cover;border:1px solid var(--lime);background:#fff}
-.reveal h3{font-family:var(--display);font-size:28px;letter-spacing:.02em}
-.reveal ul{list-style:none;margin-top:6px;font:500 11px var(--mono);color:#c5ccba}
-.reveal li span{color:var(--mute)}
 
 /* BOOK + STRIP */
 .board{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:18px}
@@ -294,16 +271,13 @@ footer{
   <div class="wrap navin">
     <a class="logo" href="#">STONKBOYZ</a>
     <div class="navlinks">
-      <a href="#mint">Mint</a>
+      <a href="#mint">The Drop</a>
       <a href="../collection/">Collection</a>
       <a href="#desk">The Desk</a>
       <a href="#mechanics">Flywheel</a>
       <a href="#rules">Rules</a>
     </div>
-    <div>
-      <span class="addr" id="addr"></span>
-      <button class="btn" id="connectBtn" type="button">Connect</button>
-    </div>
+    <a class="btn is-off" id="openseaNav" href="#mint">Mint on OpenSea</a>
   </div>
 </nav>
 
@@ -321,36 +295,22 @@ footer{
           <b id="deskState">PRE-LAUNCH</b>
         </div>
         <div class="console-body">
-          <div class="kicker">Based private trading desk // Robinhood Chain</div>
+          <div class="kicker">Based private trading desk // minting on OpenSea</div>
           <h1>NOT YOUR<br><em>DADDY'S</em><br>BROKER.</h1>
           <p class="lede">
-            One tired face. 2,222 lives. Pull your Boy, put him on the desk,
+            One tired face. 2,222 lives. Mint your Boy on OpenSea, put him on the desk,
             and let the Hood print. This is a private trading desk — just not the one that asked for your W-2.
           </p>
           <div class="stats">
             <div class="stat"><label>Supply</label><strong>2,222</strong></div>
-            <div class="stat"><label>Minted</label><strong id="minted">0</strong></div>
             <div class="stat"><label>Price</label><strong id="price">TBA</strong></div>
-            <div class="stat"><label>Chain</label><strong>HOOD</strong></div>
+            <div class="stat"><label>Mint date</label><strong id="date">TBA</strong></div>
+            <div class="stat"><label>Venue</label><strong>OpenSea</strong></div>
           </div>
-          <div class="progress" aria-hidden="true"><i id="bar"></i></div>
           <div class="mintrow">
-            <div class="qty">
-              <button type="button" id="minus">−</button>
-              <input id="qty" value="1" inputmode="numeric" aria-label="Quantity">
-              <button type="button" id="plus">+</button>
-            </div>
-            <button class="btn solid" id="mintBtn" type="button">PULL YOUR BOY</button>
+            <a class="btn solid is-off" id="openseaBtn" href="#mint">Mint on OpenSea</a>
           </div>
-          <p class="hint" id="hint">Connect a wallet. Contracts are not live — this desk is wired for the drop.</p>
-        </div>
-        <div class="reveal" id="reveal">
-          <img id="revImg" alt="">
-          <div>
-            <div class="kicker">You pulled</div>
-            <h3 id="revName">—</h3>
-            <ul id="revTraits"></ul>
-          </div>
+          <p class="hint" id="hint">The drop is on OpenSea — not here. Date TBA. Price TBA. 2,222 Boyz.</p>
         </div>
       </div>
     </div>
@@ -374,9 +334,9 @@ footer{
 
     <div class="strip">
       <div class="cell"><label>Total Boyz</label><strong>2,222</strong></div>
-      <div class="cell"><label>Minted</label><strong id="minted2">0</strong></div>
-      <div class="cell"><label>$SBOYZ burned</label><strong>0</strong></div>
-      <div class="cell"><label>Fees to the desk</label><strong>0</strong></div>
+      <div class="cell"><label>Price</label><strong id="price2">TBA</strong></div>
+      <div class="cell"><label>Mint date</label><strong id="date2">TBA</strong></div>
+      <div class="cell"><label>Mint on</label><strong>OpenSea</strong></div>
     </div>
   </section>
 
@@ -402,8 +362,8 @@ footer{
     <div class="cards">
       <article class="card hot">
         <div class="n">DESK NOTE // 001</div>
-        <h3>Pull your Boy.</h3>
-        <p>Mint one of 2,222 one-of-one Stonkboyz. Every Boy gets a seat and a place in the flywheel.</p>
+        <h3>Mint on OpenSea.</h3>
+        <p>2,222 one-of-one Stonkboyz. The drop is on OpenSea. Every Boy gets a seat and a place in the flywheel.</p>
       </article>
       <article class="card">
         <div class="n">DESK NOTE // 002</div>
@@ -433,9 +393,9 @@ footer{
     </div>
     <div class="flow">
       <article>
-        <div class="n">01 / PULL</div>
-        <h3>Pull</h3>
-        <p>Get one of 2,222 unique Stonkboyz and take your seat.</p>
+        <div class="n">01 / MINT</div>
+        <h3>Mint</h3>
+        <p>Get one of 2,222 unique Stonkboyz on OpenSea and take your seat.</p>
       </article>
       <article>
         <div class="n">02 / WORK</div>
@@ -461,7 +421,7 @@ footer{
         <div class="k">04 // House rules</div>
         <h2>Read it once.</h2>
       </div>
-      <p>Everything you actually need before you hit pull.</p>
+      <p>Everything you actually need before the OpenSea drop.</p>
     </div>
     <div class="handbook">
       <div class="mani">
@@ -472,20 +432,24 @@ footer{
       </div>
       <div>
         <details open>
-          <summary>What do I get when I pull a Boy?</summary>
+          <summary>Where do I mint?</summary>
+          <p>On OpenSea. This site is the desk — lineup, lore, and the flywheel. The mint itself is on OpenSea. Price TBA. Date TBA.</p>
+        </details>
+        <details>
+          <summary>What do I get when I mint a Boy?</summary>
           <p>A 1-of-2,222 Stonkboyz NFT, a seat in the fee flywheel, and first call on whatever this desk ships next.</p>
         </details>
         <details>
           <summary>What's $SBOYZ for?</summary>
-          <p>The token Boyz mint against and the asset staked Boyz earn. Part of trading fees buy it back and burn it. Part pays the desk.</p>
+          <p>The token Boyz work against and the asset staked Boyz earn. Part of trading fees buy it back and burn it. Part pays the desk.</p>
         </details>
         <details>
           <summary>Is this guaranteed to go up?</summary>
           <p>No. Nothing here guarantees returns. If someone tells you otherwise they work for your daddy's broker.</p>
         </details>
         <details>
-          <summary>When does the desk open?</summary>
-          <p>Contracts are still being wired. Follow <a href="https://x.com/StonkBoyz" target="_blank" rel="noopener">@StonkBoyz</a>.</p>
+          <summary>When does mint open?</summary>
+          <p>Date TBA. Price TBA. Supply is 2,222. Follow <a href="https://x.com/StonkBoyz" target="_blank" rel="noopener">@StonkBoyz</a>.</p>
         </details>
       </div>
     </div>
@@ -494,14 +458,14 @@ footer{
   <div class="final">
     <h2>GET ON<br>THE DESK.</h2>
     <div>
-      <p class="lede" style="margin-bottom:14px">2,222 Boyz. One tired face. The rest is tape.</p>
-      <a class="btn solid" href="#mint">Back to the pull</a>
+      <p class="lede" style="margin-bottom:14px">2,222 Boyz. One tired face. Mint on OpenSea.</p>
+      <a class="btn solid is-off" id="openseaFinal" href="#mint">Mint on OpenSea</a>
     </div>
   </div>
-  <p class="risk">STONKBOYZ NFTs AND $SBOYZ ARE SPECULATIVE DIGITAL COLLECTIBLES, NOT INVESTMENT ADVICE. VERIFY CONTRACTS BEFORE YOU MINT.</p>
+  <p class="risk">STONKBOYZ NFTs AND $SBOYZ ARE SPECULATIVE DIGITAL COLLECTIBLES, NOT INVESTMENT ADVICE. VERIFY THE OPENSEA LISTING BEFORE YOU MINT.</p>
   <footer>
     <div>© 2026 STONKBOYZ // PRIVATE DESK</div>
-    <div>2,222 BOYZ // ROBINHOOD CHAIN</div>
+    <div>2,222 BOYZ // MINT ON OPENSEA</div>
     <a href="https://x.com/StonkBoyz" target="_blank" rel="noopener">𝕏 @STONKBOYZ</a>
   </footer>
 </main>
@@ -509,10 +473,9 @@ footer{
 <script>
 const CFG = {
   supply: 2222,
-  minted: 0,
-  price: null,
-  contract: null,
-  maxQty: 5,
+  price: null,   // e.g. "0.03 ETH"
+  date: null,    // e.g. "Sept 2026"
+  opensea: null, // OpenSea drop / collection URL when it exists
 };
 
 const ticks = [
@@ -588,83 +551,47 @@ document.addEventListener("pointerdown", () => {
 }, { once: true });
 startAnthem();
 
-let boyz = [];
-let account = null;
-let qty = 1;
+function label(v){ return v || "TBA"; }
 
-function setQty(n){
-  qty = Math.max(1, Math.min(CFG.maxQty, n|0));
-  document.getElementById("qty").value = qty;
-}
-document.getElementById("minus").onclick = () => setQty(qty-1);
-document.getElementById("plus").onclick = () => setQty(qty+1);
-document.getElementById("qty").onchange = e => setQty(e.target.value);
-
-function short(a){ return a.slice(0,6)+"…"+a.slice(-4); }
-
-async function connect(){
-  const btn = document.getElementById("connectBtn");
-  if (window.ethereum) {
-    try {
-      const accs = await window.ethereum.request({ method: "eth_requestAccounts" });
-      account = accs[0];
-    } catch (e) {
-      document.getElementById("hint").textContent = "Wallet rejected. Try again.";
-      return;
+function wireOpenSea(){
+  const live = Boolean(CFG.opensea);
+  const href = live ? CFG.opensea : "#mint";
+  ["openseaBtn","openseaNav","openseaFinal"].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.href = href;
+    el.classList.toggle("is-off", !live);
+    if (live) {
+      el.target = "_blank";
+      el.rel = "noopener";
+    } else {
+      el.removeAttribute("target");
+      el.removeAttribute("rel");
     }
-  } else {
-    account = "0xDESK"+Math.random().toString(16).slice(2,10);
-    document.getElementById("hint").textContent = "No wallet found — desk session is local until contracts go live.";
-  }
-  document.getElementById("addr").textContent = short(account);
-  btn.textContent = "Connected";
-  btn.disabled = true;
+  });
+  document.getElementById("price").textContent = label(CFG.price);
+  document.getElementById("price2").textContent = label(CFG.price);
+  document.getElementById("date").textContent = label(CFG.date);
+  document.getElementById("date2").textContent = label(CFG.date);
+  document.getElementById("deskState").textContent = live ? "OPENSEA LIVE" : "PRE-LAUNCH";
+  document.getElementById("hint").textContent = live
+    ? `Mint on OpenSea. Supply ${CFG.supply.toLocaleString()}. Price ${label(CFG.price)}. Date ${label(CFG.date)}.`
+    : "The drop is on OpenSea — not here. Date TBA. Price TBA. 2,222 Boyz.";
 }
-
-document.getElementById("connectBtn").onclick = connect;
+wireOpenSea();
 
 function renderWall(){
   document.getElementById("wall").innerHTML = boyz.map(b => `
-    <figure data-id="${b.id}">
-      <img src="${b.file}" alt="Stonkboyz #${b.id}" width="320" height="320">
-      <figcaption>#${b.id} · ${b.attrs.Tier}</figcaption>
-    </figure>
+    <a href="../collection/" style="text-decoration:none">
+      <figure>
+        <img src="${b.file}" alt="Stonkboyz #${b.id}" width="320" height="320">
+        <figcaption>#${b.id} · ${b.attrs.Tier}</figcaption>
+      </figure>
+    </a>
   `).join("");
 }
 
-function showReveal(b){
-  const box = document.getElementById("reveal");
-  document.getElementById("revImg").src = b.file;
-  document.getElementById("revName").textContent = "STONKBOYZ #"+b.id;
-  document.getElementById("revTraits").innerHTML =
-    ["Clothes","Eyes","Mouth","Headwear","Nose"].map(k =>
-      `<li><span>${k}</span> ${b.attrs[k]||"—"}</li>`
-    ).join("");
-  box.classList.add("on");
-}
-
-document.getElementById("mintBtn").onclick = async () => {
-  if (!account) { await connect(); if (!account) return; }
-  const btn = document.getElementById("mintBtn");
-  btn.disabled = true;
-  btn.textContent = "PULLING…";
-  await new Promise(r => setTimeout(r, 700));
-  if (CFG.contract) {
-    document.getElementById("hint").textContent = "Contract mint not wired yet.";
-  } else {
-    const pick = boyz[Math.floor(Math.random()*boyz.length)];
-    CFG.minted = Math.min(CFG.supply, CFG.minted + qty);
-    document.getElementById("minted").textContent = CFG.minted;
-    document.getElementById("minted2").textContent = CFG.minted;
-    document.getElementById("bar").style.width = (100*CFG.minted/CFG.supply)+"%";
-    showReveal(pick);
-    document.getElementById("hint").textContent = "Preview pull — live mints start when the contract is posted.";
-    document.getElementById("deskState").textContent = "DESK HOT";
-  }
-  btn.disabled = false;
-  btn.textContent = "PULL YOUR BOY";
-};
-
+let boyz = [];
 fetch("boyz.json").then(r => r.json()).then(data => {
   boyz = data;
   renderWall();
