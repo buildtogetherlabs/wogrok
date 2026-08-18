@@ -50,7 +50,7 @@
     { "id": "hat_santa", "when": { "headwear": "Santa", "eyes": ["Blacked Out", "Eye Patch", "3D Glasses", "Pixel Glasses"] }, "reason": "Santa clashes with these eyes." },
     { "id": "energy_eyewear", "when": { "eyes": "Energy", "headwear": ["Beanie"] }, "reason": "Energy is an eye layer; beanie already has no drawn eyes." }
   ],
-  "rarity_notes": "Weights are relative inside each layer. Probability = weight / sum(layer). None headwear is first-class so the album-cover bald look can mint.",
+  "rarity_notes": "Weights are relative inside each layer. Probability = weight / sum(layer). None headwear is first-class so the album-cover bald look can mint. Overall token Tier is 3-way: Legendary if any legendary trait; Common if a rare/epic trait is present (majority); Rare if every trait is common/uncommon/base.",
   "layers": {
     "background": [
       { "id": "PNL Standard", "file": "01-background/PNL Standard.png", "weight": 60, "tier": "common" },

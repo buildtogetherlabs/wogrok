@@ -51,9 +51,19 @@ Bandage mouth is **out**. File stays in `layers/04-mouth/` but is not minted.
 
 ## Rarity (proposed + used)
 
-Weights are relative inside each layer. Full expected-vs-actual table: [`RARITY.md`](RARITY.md).
+Overall token tiers (the label on each boy):
 
-Headline odds on 3,333:
+| Overall | Count | Share |
+|---|---:|---:|
+| Common | **1405** | 63.2% |
+| Rare | **757** | 34.1% |
+| Legendary | **60** | 2.7% |
+
+Legendary = Cult Robe, Taco Trade, or Alien nose. Common is the majority bucket. Rare is the cleaner all-plain look.
+
+Trait weights are relative inside each layer. Full expected-vs-actual table: [`RARITY.md`](RARITY.md).
+
+Headline trait odds on 2,222:
 
 | Trait | Tier | Actual |
 |---|---|---|

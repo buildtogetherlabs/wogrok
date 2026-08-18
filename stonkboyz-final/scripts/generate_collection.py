@@ -166,10 +166,20 @@ def token_metadata(cfg: dict, token_id: int, picked: dict[str, dict], score: flo
 
 
 def token_tier(picked: dict[str, dict]) -> str:
+    """Overall token rarity. Majority bucket is Common.
+
+    Trait-group max → overall name:
+      legendary              → Legendary
+      common / uncommon / base (plain look) → Rare
+      rare / epic (has a punchy trait) → Common
+    """
     rank = {"common": 0, "uncommon": 1, "rare": 2, "epic": 3, "legendary": 4, "base": 0}
-    names = {0: "Common", 1: "Uncommon", 2: "Rare", 3: "Epic", 4: "Legendary"}
     best = max(rank.get(picked[k].get("tier", "common"), 0) for k in TRAIT_TYPES)
-    return names[best]
+    if best >= 4:
+        return "Legendary"
+    if best <= 1:
+        return "Rare"
+    return "Common"
 
 
 def expected_pct(trait: dict, layer_traits: list[dict]) -> float:
@@ -226,6 +236,24 @@ def write_report(cfg: dict, tokens: list[dict], rejected: int, out: Path) -> Non
         f"- Duplicate DNA retries (unique-combo enforcement): {rejected}",
         f"- Unique DNA: {len({t['dna'] for t in tokens})}",
         f"- Conflict-rule violations in the final set: 0",
+        "",
+        "Overall token tiers (3). A boy is Legendary if he has a legendary trait;",
+        "otherwise the majority bucket (rare/epic trait present) is **Common**,",
+        "and the all-plain look is **Rare**.",
+        "",
+    ]
+    overall = Counter(
+        next(a["value"] for a in t["attributes"] if a["trait_type"] == "Tier")
+        for t in tokens
+    )
+    lines += [
+        "| Overall | Count | Share |",
+        "|---|---:|---:|",
+    ]
+    for name in ("Common", "Rare", "Legendary"):
+        n = overall.get(name, 0)
+        lines.append(f"| {name} | {n} | {100.0 * n / cfg['supply']:.1f}% |")
+    lines += [
         "",
         "Conflicts locked:",
     ]

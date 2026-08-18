@@ -6,6 +6,20 @@
 - Unique DNA: 2222
 - Conflict-rule violations in the final set: 0
 
+## Overall token tiers (3)
+
+A boy is **Legendary** if he has Cult Robe, Taco Trade, or Alien nose.
+Otherwise the majority look (has a punchy rare/epic trait) is **Common**,
+and the all-plain look is **Rare**.
+
+| Overall | Count | Share |
+|---|---:|---:|
+| Common | 1405 | 63.2% |
+| Rare | 757 | 34.1% |
+| Legendary | 60 | 2.7% |
+
+Trait-level rows below still use the original five design labels (common / uncommon / rare / epic / legendary). Those are weights inside each layer, not the token's overall tier.
+
 Conflicts locked:
 - `double_bandana`: mouth=Bandana, headwear=Bandana — Two bandanas on the same face.
 - `cowboy_neckerchief`: clothes=Cowboy, mouth=Bandana — Cowboy already has a neckerchief.
